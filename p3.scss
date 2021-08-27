@@ -1,4 +1,8 @@
 $color-primary:#9356DC;
 $color-secondary:#FF79DA; 
 $color-tertiary:#99E2D0;
-$background-color:#f2f2f2,
+$background-color:#f2f2f2;
+.heading{display: flex;
+    flex-direction: column;
+justify-content: center;
+background-color:$background-color;}
