@@ -9,12 +9,26 @@ $background-color:#f2f2f2;
     font-family: 'Roboto', sans-serif;
 }
 
-.heading{width: 100%;
-background-color:$background-color;}
+.logo{width: 40%;
+background-color: white;
+}
+.heading{
+    width: 100%;
 
-.map{ background-color: #d8d5d8;}
-.btn{width: 30%;
-    padding: 2%;
+    text-align: center;
+    
+}
+
+.titre{font-size: 0.7em;
+font-weight: 900;}
+
+.heading__map{ background-color: #d8d5d8;
+padding: 1%;}
+.heading__background{ background-color: #f2f2f2;
+padding-bottom: 30px;}
+
+.btn{width: 50%;
+    padding: 3.5%;
     border:solid;
 border-width: 1px;
 border-radius: 100px;
@@ -25,17 +39,23 @@ background: linear-gradient($color-secondary,$color-primary);
 
 ol button { border:solid;
 border-width: thin;
-border-radius: 30px;
-padding: 2%;
+border-color: transparent;
+border-radius: 10px;
+box-shadow: grey;
+margin-bottom: 15px;
+padding: 5%;
 width: 100%;}
 
-section{background-color: #f2f2f2;}
+section{background-color: #f2f2f2;
+align-items: center;}
 
 .resto{width: 100%;
+    height: 200px;
     border-top-left-radius: 30px;
 border-top-right-radius: 30px;}
 
-.restaurants{border:solid;
+.restaurants{width: 95%;
+    border:solid;
 border-width: thin;
 border-color:transparent;
 border-radius: 30px;
@@ -43,3 +63,6 @@ background-color: white;
 margin-bottom: 20px;}
 
 footer{background-color: rgb(61, 58, 58);}
+
+.footer__ohmyfood{color: white;
+font-family:'Shrikhand', cursive; }

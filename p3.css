@@ -3,18 +3,34 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.heading {
-  width: 100%;
-  background-color: #f2f2f2;
+.logo {
+  width: 40%;
+  background-color: white;
 }
 
-.map {
+.heading {
+  width: 100%;
+  text-align: center;
+}
+
+.titre {
+  font-size: 0.7em;
+  font-weight: 900;
+}
+
+.heading__map {
   background-color: #d8d5d8;
+  padding: 1%;
+}
+
+.heading__background {
+  background-color: #f2f2f2;
+  padding-bottom: 30px;
 }
 
 .btn {
-  width: 30%;
-  padding: 2%;
+  width: 50%;
+  padding: 3.5%;
   border: solid;
   border-width: 1px;
   border-radius: 100px;
@@ -26,22 +42,31 @@
 ol button {
   border: solid;
   border-width: thin;
-  border-radius: 30px;
-  padding: 2%;
+  border-color: transparent;
+  border-radius: 10px;
+  -webkit-box-shadow: grey;
+          box-shadow: grey;
+  margin-bottom: 15px;
+  padding: 5%;
   width: 100%;
 }
 
 section {
   background-color: #f2f2f2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .resto {
   width: 100%;
+  height: 200px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
 
 .restaurants {
+  width: 95%;
   border: solid;
   border-width: thin;
   border-color: transparent;
@@ -52,5 +77,10 @@ section {
 
 footer {
   background-color: #3d3a3a;
+}
+
+.footer__ohmyfood {
+  color: white;
+  font-family: 'Shrikhand', cursive;
 }
 /*# sourceMappingURL=p3.css.map */
