@@ -2,7 +2,13 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" media="screen" type="text/css" title="p3" href="p3.css"/>
+    <link
+      rel="stylesheet"
+      media="screen"
+      type="text/css"
+      title="p3"
+      href="p3.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,38 +21,44 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Réservez le menu qui vous convient</title>
   </head>
 
   <body>
     <header>
       
-       <div class="heading"> <img
+        <img
           src="images/logo/ohmyfood.png"
           alt="logoohmyfood"
           srcset="images/logo/ohmyfood.png"
-      /> 
-      <p><i class="fas fa-map-marker-alt"></i>Paris,Belleville</p>
-      <h1>Réservez le menu qui vous convient</h1>
-      <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-      <button>Explorez nos restaurants</button> </div>
+        />
+        <div class="heading">
+       <div class="map"> <p><i class="fas fa-map-marker-alt"></i>Paris,Belleville</p></div>
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>
+          Découvrez des restaurants d'exception, sélectionnés par nos soins.
+        </p>
+        <button class="btn">Explorez nos restaurants</button>
+      </div>
     </header>
 
-    <nav>
-      <h1>Fonctionnement</h1>
-      <ul>
-        <li><button>Choisissez un restaurant</button></li>
-        <li><button>Composez votre menu</button></li>
-        <li><button>Dégustez au restaurant</button></li>
-      </ul>
-    </nav>
+    <div class="menu">
+      <nav>
+        <h1>Fonctionnement</h1>
+        <ol>
+          <li><button>Choisissez un restaurant</button></li>
+          <li><button>Composez votre menu</button></li>
+          <li><button>Dégustez au restaurant</button></li>
+        </ol>
+      </nav>
+    </div>
 
     <section>
       <h1>Restaurants</h1>
-      <div>
+      <div class="restaurants">
         <a href="menupalette.html"
-          ><img
+          ><img class="resto"
             src="images/restaurants/palette.jpg"
             alt="La palette du goût"
             srcset="images/restaurants/palette.jpg"
@@ -56,9 +68,9 @@
         </a>
       </div>
 
-      <div>
+      <div class="restaurants">
         <a href="menunote.html"
-          ><img
+          ><img class="resto"
             src="images/restaurants/note.jpg"
             alt="La note enchantée"
             srcset="images/restaurants/note.jpg"
@@ -67,9 +79,9 @@
           <p>Charonne</p>
         </a>
       </div>
-      <div>
+      <div class="restaurants">
         <a href="menufr.html"
-          ><img
+          ><img class="resto"
             src="images/restaurants/francaise.jpg"
             alt="A la française"
             srcset="images/restaurants/francaise.jpg"
@@ -78,9 +90,9 @@
           <p>Cité Rouge</p>
         </a>
       </div>
-      <div>
+      <div class="restaurants">
         <a href="menudelice.html"
-          ><img
+          ><img class="resto"
             src="images/restaurants/delice.jpg"
             alt="Le délice des sens"
             srcset="images/restaurants/delice.jpg"

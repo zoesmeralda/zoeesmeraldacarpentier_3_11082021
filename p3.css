@@ -1,14 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap");
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
   background-color: #f2f2f2;
+}
+
+.map {
+  background-color: #d8d5d8;
+}
+
+.btn {
+  width: 30%;
+  padding: 2%;
+  border: solid;
+  border-width: 1px;
+  border-radius: 100px;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+ol button {
+  border: solid;
+  border-width: thin;
+  border-radius: 30px;
+  padding: 2%;
+  width: 100%;
+}
+
+section {
+  background-color: #f2f2f2;
+}
+
+.resto {
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.restaurants {
+  border: solid;
+  border-width: thin;
+  border-color: transparent;
+  border-radius: 30px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #3d3a3a;
 }
 /*# sourceMappingURL=p3.css.map */
