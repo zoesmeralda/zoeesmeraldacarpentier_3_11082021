@@ -8,7 +8,7 @@ $background-color:#f2f2f2;
 *{
     font-family: 'Roboto', sans-serif;
 }
-
+a { text-decoration: none;}
 .logo{width: 40%;
 background-color: white;
 }
@@ -36,6 +36,7 @@ padding-top: 30px;
 border-width: 1px;
 border-radius: 100px;
 color: white;
+box-shadow: 6px 6px 6px lightgrey;
 background: linear-gradient($color-secondary,$color-primary);
 transition: background-color 250ms;
 
@@ -87,3 +88,4 @@ footer{background-color: rgb(61, 58, 58);}
 
 .footer__ohmyfood{color: white;
 font-family:'Shrikhand', cursive; }
+}
