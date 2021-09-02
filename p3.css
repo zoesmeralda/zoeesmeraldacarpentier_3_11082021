@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap");
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+  width: 40%;
+  background-color: white;
+}
+
+.heading-p3 {
+  width: 100%;
+  text-align: center;
+}
+
+.titre {
+  font-size: 0.7em;
+  font-weight: 900;
+}
+
+.heading-p3__map {
+  background-color: #d8d5d8;
+  padding: 1%;
+}
+
+.heading-p3__background {
+  background-color: #f2f2f2;
+  padding-bottom: 30px;
+}
+
+.btn {
+  width: 50%;
+  padding: 3.5%;
+  border: solid;
+  border-width: 1px;
+  border-radius: 100px;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+ol button {
+  border: solid;
+  border-width: thin;
+  border-color: transparent;
+  border-radius: 20px;
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
+  margin-bottom: 15px;
+  padding: 5%;
+  width: 100%;
+  font-weight: bold;
+}
+
+section {
+  background-color: #f2f2f2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .far {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  -webkit-transform: background-color;
+          transform: background-color;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+section .far:active {
+  background-color: linear-gradient(#FF79DA, #9356DC);
+}
+
+.resto {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.restaurants {
+  position: relative;
+  width: 95%;
+  border: solid;
+  border-width: thin;
+  border-color: transparent;
+  border-radius: 30px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #3d3a3a;
+}
+
+.footer__ohmyfood {
+  color: white;
+  font-family: 'Shrikhand', cursive;
+}
+/*# sourceMappingURL=p3.css.map */
