@@ -56,10 +56,18 @@ a {
   -webkit-box-shadow: 6px 6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey;
   margin-bottom: 15px;
-  padding: 20px;
+}
+
+.rounded-accueil {
   width: 100%;
   font-weight: bold;
+  padding: 20px;
   position: relative;
+}
+
+.rounded-menu {
+  width: 95%;
+  background-color: white;
 }
 
 .fonc {
@@ -69,6 +77,10 @@ a {
 
 .fonc:hover {
   color: #9356dc;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .cartes {

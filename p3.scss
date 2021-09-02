@@ -60,17 +60,24 @@ a {
     border-radius: 20px;
     box-shadow: 6px 6px 6px lightgrey;
     margin-bottom: 15px;
-    padding: 20px;
-    width: 100%;
-    font-weight: bold;
-    position: relative;
+    
+   
 }
+.rounded-accueil{ width: 100%;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;}
+
+    .rounded-menu{ width: 95%;
+    background-color: white;}
 
 .fonc {
     position: absolute;
     left: 0;
     &:hover{color: $color-primary;}
 }
+
+.bold{font-weight: bold;}
 
 .cartes {
     background-color: #f2f2f2;
