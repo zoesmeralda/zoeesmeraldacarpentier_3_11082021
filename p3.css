@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap");
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .logo {
@@ -13,7 +17,7 @@
   text-align: center;
 }
 
-.titre {
+.heading-p3__titre {
   font-size: 0.7em;
   font-weight: 900;
 }
@@ -26,6 +30,7 @@
 .heading-p3__background {
   background-color: #f2f2f2;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .btn {
@@ -35,11 +40,15 @@
   border-width: 1px;
   border-radius: 100px;
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
 }
 
-ol button {
+.rounded {
   border: solid;
   border-width: thin;
   border-color: transparent;
@@ -47,30 +56,44 @@ ol button {
   -webkit-box-shadow: 6px 6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey;
   margin-bottom: 15px;
-  padding: 5%;
+  padding: 20px;
   width: 100%;
   font-weight: bold;
+  position: relative;
 }
 
-section {
+.fonc {
+  position: absolute;
+  left: 0;
+}
+
+.fonc:hover {
+  color: #9356dc;
+}
+
+.cartes {
   background-color: #f2f2f2;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-section .far {
+.heart {
   position: absolute;
   right: 30px;
   bottom: 40px;
-  -webkit-transform: background-color;
-          transform: background-color;
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
+  color: blue;
 }
 
-section .far:active {
-  background-color: linear-gradient(#FF79DA, #9356DC);
+.heart:active {
+  color: red;
 }
 
 .resto {
@@ -93,10 +116,11 @@ section .far:active {
 
 footer {
   background-color: #3d3a3a;
+  color: white;
 }
 
 .footer__ohmyfood {
   color: white;
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 /*# sourceMappingURL=p3.css.map */

@@ -7,20 +7,23 @@ $background-color: #f2f2f2;
 * {
     font-family: "Roboto", sans-serif;
 }
+
 a {
     text-decoration: none;
 }
+
 .logo {
     width: 40%;
     background-color: white;
 }
+
 .heading-p3 {
     width: 100%;
 
     text-align: center;
 }
 
-.titre {
+.heading-p3__titre {
     font-size: 0.7em;
     font-weight: 900;
 }
@@ -29,6 +32,7 @@ a {
     background-color: #d8d5d8;
     padding: 1%;
 }
+
 .heading-p3__background {
     background-color: #f2f2f2;
     padding-bottom: 30px;
@@ -44,14 +48,12 @@ a {
     color: white;
     box-shadow: 6px 6px 6px lightgrey;
     background: linear-gradient($color-secondary, $color-primary);
-    transition: background-color 250ms;
+    transition-duration:  250ms;
 
-    &:hover {
-        background-color: lighten($color: linear-gradient($color-secondary, $color-primary), $amount: 10);
-    }
+    
 }
 
-ol button {
+.rounded {
     border: solid;
     border-width: thin;
     border-color: transparent;
@@ -63,24 +65,31 @@ ol button {
     font-weight: bold;
     position: relative;
 }
-.fas {
+
+.fonc {
     position: absolute;
-    left: 1;
+    left: 0;
+    &:hover{color: $color-primary;}
 }
 
-section {
+.cartes {
     background-color: #f2f2f2;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .heart {
     position: absolute;
     right: 30px;
     bottom: 40px;
-    transform: background-color;
-    transition-duration: 3s;
+    
+    
     color: blue;
-    :hover {
-        background-color: red;
+
+    &:active {
+        color: red;
+        
     }
 }
 
@@ -104,6 +113,7 @@ section {
 
 footer {
     background-color: rgb(61, 58, 58);
+    color: white;
 }
 
 .footer__ohmyfood {
