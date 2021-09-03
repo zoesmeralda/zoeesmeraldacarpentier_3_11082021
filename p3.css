@@ -33,6 +33,10 @@ a {
   padding-top: 30px;
 }
 
+.heading-img {
+  width: 100%;
+}
+
 .btn {
   width: 50%;
   padding: 3.5%;
@@ -70,6 +74,10 @@ a {
   background-color: white;
 }
 
+.prix {
+  font-weight: bold;
+}
+
 .fonc {
   position: absolute;
   left: 0;
@@ -95,6 +103,29 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.menus {
+  width: 100%;
+  background-color: #f2f2f2;
+  border: solid;
+  border-color: #f2f2f2;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.menus-titres {
+  font-weight: normal;
+  font-size: 1em;
+  color: gray;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: #99e2d0;
+          text-decoration-color: #99e2d0;
+}
+
+.menus__ul {
+  list-style-type: none;
 }
 
 .heart {
