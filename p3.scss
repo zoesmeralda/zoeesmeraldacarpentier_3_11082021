@@ -2,6 +2,7 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+
 $background-color: #f2f2f2;
 
 * {
@@ -34,12 +35,14 @@ a {
 }
 
 .heading-p3__background {
-    background-color:$background-color;
+    background-color: $background-color;
     padding-bottom: 30px;
     padding-top: 30px;
 }
 
-.heading-img{width: 100%;}
+.heading-img {
+    width: 100%;
+}
 
 .btn {
     width: 50%;
@@ -50,9 +53,30 @@ a {
     color: white;
     box-shadow: 6px 6px 6px lightgrey;
     background: linear-gradient($color-secondary, $color-primary);
-    transition-duration:  250ms;
+    position: relative;
+    transition-duration: 250ms;
 
-    
+    &:hover {
+        box-shadow: 10px 10px 10px darkgrey;
+
+        &::after {
+            opacity: 1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: linear-gradient(linear, lighten($color-secondary, 25)100%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
+
+    }
 }
 
 .rounded {
@@ -62,28 +86,58 @@ a {
     border-radius: 20px;
     box-shadow: 6px 6px 6px lightgrey;
     margin-bottom: 15px;
-    
-   
+
+
 }
-.rounded-accueil{ width: 100%;
+
+
+
+
+
+
+.rounded-accueil {
+    width: 100%;
     font-weight: bold;
     padding: 20px;
-    position: relative;}
+    position: relative;
+}
 
-    .rounded-menu{text-align: start;
-        width: 95%;
-    background-color: white;}
+.rounded-menu {
+    text-align: start;
+    width: 95%;
+    background-color: white;
+}
 
-    .prix {
-        font-weight: bold;}
+.prix {
+    font-weight: bold;
+}
+
+ol {display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
+.menu-p3__list{width: 20px;
+    border:solid;
+border-radius: 100px;
+border-color: $color-primary;
+background-color: $color-primary;
+text-align: center;
+color: white;}
 
 .fonc {
     position: absolute;
     left: 0;
-    &:hover{color: $color-primary;}
+    text-indent: 50px;
+
+    &:hover {
+        color: $color-primary;
+    }
 }
 
-.bold{font-weight: bold;}
+.bold {
+    font-weight: bold;
+}
 
 .cartes {
     background-color: $background-color;
@@ -92,34 +146,40 @@ a {
     justify-content: center;
 }
 
-.menus{ width: 100%;
-    
-    background-color:$background-color ;
-border:solid;
-border-color: $background-color;
-border-top-left-radius: 30px;
-border-top-right-radius: 30px;}
+.menus {
+    width: 100%;
 
-.menus-titres{font-weight: normal;
-font-size: 1em;
-color: gray;
-text-decoration-line: underline;
-text-decoration-color: $color-tertiary;}
+    background-color: $background-color;
+    border: solid;
+    border-color: $background-color;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
 
-.menus__ul{list-style-type: none;}
+.menus-titres {
+    font-weight: normal;
+    font-size: 1em;
+    color: gray;
+    text-decoration-line: underline;
+    text-decoration-color: $color-tertiary;
+}
+
+.menus__ul {
+    list-style-type: none;
+}
 
 
 .heart {
     position: absolute;
     right: 30px;
     bottom: 40px;
-    
-    
     color: blue;
+    transition: all 450ms;
 
     &:active {
-        color: red;
-        
+        font-weight: bold;
+        color:linear-gradient($color-secondary, $color-primary);
+
     }
 }
 
@@ -130,7 +190,7 @@ text-decoration-color: $color-tertiary;}
     border-top-right-radius: 30px;
 }
 
-.restaurants {
+.cartes__restaurants {
     position: relative;
     width: 95%;
     border: solid;
@@ -148,8 +208,10 @@ footer {
 
 .footer__ohmyfood {
     color: white;
-    font: "Shrikhand", cursive;
+    font-family: 'Shrikhand', cursive;
 }
 
-.footer__contact{ text-decoration: none;
-color: white;}
+.footer__contact {
+    text-decoration: none;
+    color: white;
+}

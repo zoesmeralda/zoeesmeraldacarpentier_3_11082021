@@ -48,8 +48,32 @@ a {
           box-shadow: 6px 6px 6px lightgrey;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
+  position: relative;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 10px 10px 10px darkgrey;
+          box-shadow: 10px 10px 10px darkgrey;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: linear-gradient(linear, #fff9fd 100%);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 .rounded {
@@ -79,9 +103,34 @@ a {
   font-weight: bold;
 }
 
+ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+}
+
+.menu-p3__list {
+  width: 20px;
+  border: solid;
+  border-radius: 100px;
+  border-color: #9356dc;
+  background-color: #9356dc;
+  text-align: center;
+  color: white;
+}
+
 .fonc {
   position: absolute;
   left: 0;
+  text-indent: 50px;
 }
 
 .fonc:hover {
@@ -134,10 +183,13 @@ a {
   right: 30px;
   bottom: 40px;
   color: blue;
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
 }
 
 .heart:active {
-  color: red;
+  font-weight: bold;
+  color: linear-gradient(#ff79da, #9356dc);
 }
 
 .resto {
@@ -147,7 +199,7 @@ a {
   border-top-right-radius: 30px;
 }
 
-.restaurants {
+.cartes__restaurants {
   position: relative;
   width: 95%;
   border: solid;
@@ -165,7 +217,7 @@ footer {
 
 .footer__ohmyfood {
   color: white;
-  font: "Shrikhand", cursive;
+  font-family: 'Shrikhand', cursive;
 }
 
 .footer__contact {
