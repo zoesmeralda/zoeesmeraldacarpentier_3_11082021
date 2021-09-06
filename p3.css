@@ -56,24 +56,7 @@ a {
 .btn:hover {
   -webkit-box-shadow: 10px 10px 10px darkgrey;
           box-shadow: 10px 10px 10px darkgrey;
-}
-
-.btn:hover::after {
-  opacity: 1;
-}
-
-.btn:hover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: linear-gradient(linear, #fff9fd 100%);
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
+  background-color: linear-gradient(#b68ee7, lightpink);
 }
 
 .rounded {
@@ -182,7 +165,7 @@ ol {
   position: absolute;
   right: 30px;
   bottom: 40px;
-  color: blue;
+  color: black;
   -webkit-transition: all 450ms;
   transition: all 450ms;
 }
