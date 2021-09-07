@@ -129,7 +129,15 @@ color: white;}
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+    @media only screen and (min-width : 1224px){display: flex;
+    flex-direction: row;
+justify-content: space-around;}
+
+.cartes__titre{ 
+    @media only screen and (min-width : 1224px){width: 100%;}
+        
+    
+}}
 
 .menus {
     width: 100%;
@@ -154,16 +162,18 @@ color: white;}
 }
 
 
+
+
 .heart {
     position: absolute;
     right: 30px;
     bottom: 40px;
-    color: black;
     transition: all 450ms;
-
-    &:active {
-        font-weight: bold;
-        color:linear-gradient($color-secondary, $color-primary);
+    font-weight: bold;
+    &:active {color: $color-secondary;
+        
+       
+        
 
     }
 }
@@ -185,6 +195,14 @@ color: white;}
     background-color: white;
     margin-bottom: 20px;
 }
+.nouveau{border:solid;
+border-color: $color-tertiary;
+background-color: $color-tertiary;
+color: darkgreen;
+padding: 5px;
+position: absolute;
+top: 15px;
+right: 15px;}
 
 footer {
     background-color: rgb(61, 58, 58);
