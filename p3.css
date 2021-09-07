@@ -87,6 +87,11 @@ a {
   position: relative;
 }
 
+.rounded-menu:hover + .rounded-menu__bloc {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .rounded-menu__bloc {
   position: absolute;
   right: 0;
