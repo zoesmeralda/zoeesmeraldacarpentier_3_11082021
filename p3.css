@@ -42,6 +42,7 @@ a {
   padding: 3.5%;
   border: solid;
   border-width: 1px;
+  border-color: transparent;
   border-radius: 100px;
   color: white;
   -webkit-box-shadow: 6px 6px 6px lightgrey;
@@ -49,8 +50,6 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
   position: relative;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
 }
 
 .btn:hover {
@@ -59,7 +58,7 @@ a {
   background-color: linear-gradient(#b68ee7, lightpink);
 }
 
-.rounded {
+.rounded-accueil {
   border: solid;
   border-width: thin;
   border-color: transparent;
@@ -67,19 +66,33 @@ a {
   -webkit-box-shadow: 6px 6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey;
   margin-bottom: 15px;
-}
-
-.rounded-accueil {
   width: 100%;
   font-weight: bold;
   padding: 20px;
   position: relative;
+  z-index: 1;
 }
 
 .rounded-menu {
+  border: solid;
+  border-width: thin;
+  border-color: transparent;
+  border-radius: 20px;
+  -webkit-box-shadow: 6px 6px 6px lightgrey;
+          box-shadow: 6px 6px 6px lightgrey;
+  margin-bottom: 15px;
   text-align: start;
   width: 95%;
   background-color: white;
+  position: relative;
+}
+
+.rounded-menu__bloc {
+  position: absolute;
+  right: 0;
+  border: solid;
+  border-color: #99e2d0;
+  background-color: #99e2d0;
 }
 
 .prix {
@@ -104,10 +117,15 @@ ol {
   width: 20px;
   border: solid;
   border-radius: 100px;
+  padding: 4px 2px 4px 2px;
   border-color: #9356dc;
   background-color: #9356dc;
   text-align: center;
   color: white;
+  z-index: 2;
+  position: absolute;
+  left: -7px;
+  top: 17px;
 }
 
 .fonc {
@@ -149,12 +167,8 @@ ol {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-}
-
-@media only screen and (min-width: 1224px) {
-  .cartes .cartes__titre {
-    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -230,7 +244,7 @@ footer {
 
 .footer__ohmyfood {
   color: white;
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 
 .footer__contact {
