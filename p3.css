@@ -11,12 +11,16 @@ a {
 
 .logo {
   width: 40%;
-  background-color: white;
 }
 
 .heading-p3 {
   width: 100%;
   text-align: center;
+}
+
+.heading-p3__logo {
+  width: 40%;
+  background-color: white;
 }
 
 .heading-p3__titre {
@@ -85,11 +89,12 @@ a {
   margin-bottom: 15px;
   text-align: start;
   width: 95%;
+  height: 60px;
   background-color: white;
   position: relative;
 }
 
-.rounded-menu:hover + .rounded-menu__bloc {
+.rounded-menu:active + .rounded-menu__bloc {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -100,10 +105,14 @@ a {
   border: solid;
   border-color: #99e2d0;
   background-color: #99e2d0;
+  width: 100px;
+  height: 50px;
 }
 
 .prix {
   font-weight: bold;
+  position: absolute;
+  right: 10px;
 }
 
 ol {
@@ -147,6 +156,7 @@ ol {
 
 .bold {
   font-weight: bold;
+  line-height: 5px;
 }
 
 .cartes {

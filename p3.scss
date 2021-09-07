@@ -25,9 +25,7 @@ a {
     color: black;
 }
 
-.logo {
-    width: 40%;
-    background-color: white;
+.logo{width: 40%;
 }
 
 .heading-p3 {
@@ -36,6 +34,11 @@ a {
     text-align: center;
 }
 
+.heading-p3__logo {
+    width: 40%;
+    background-color: white;
+    
+}
 .heading-p3__titre {
     font-size: 0.7em;
     font-weight: 900;
@@ -87,20 +90,25 @@ a {
 .rounded-menu {@include rounded;
     text-align: start;
     width: 95%;
+    height: 60px;
     background-color: white;
     position: relative;
 
-    &:hover+.rounded-menu__bloc{transform: scale(1);}
+    &:active+.rounded-menu__bloc{transform: scale(1);}
 }
 .rounded-menu__bloc{position: absolute;
     right: 0;
     border:solid;
 border-color: $color-tertiary;
 background-color: $color-tertiary;
+width: 100px;
+height: 50px;
 }
 
 .prix {
     font-weight: bold;
+    position: absolute;
+    right: 10px;
 }
 
 ol {
@@ -140,6 +148,7 @@ ol {
 
 .bold {
     font-weight: bold;
+    line-height: 5px;
 }
 
 .cartes {
