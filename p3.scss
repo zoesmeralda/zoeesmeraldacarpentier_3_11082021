@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
@@ -14,8 +14,6 @@ $background-color: #f2f2f2;
     margin-bottom: 15px;
 }
 
-
-
 * {
     font-family: "Roboto", sans-serif;
 }
@@ -25,7 +23,8 @@ a {
     color: black;
 }
 
-.logo{width: 40%;
+.logo {
+    width: 40%;
 }
 
 .heading-p3 {
@@ -37,7 +36,6 @@ a {
 .heading-p3__logo {
     width: 40%;
     background-color: white;
-    
 }
 .heading-p3__titre {
     font-size: 0.7em;
@@ -84,25 +82,28 @@ a {
     padding: 20px;
     position: relative;
     z-index: 1;
-    
 }
 
-.rounded-menu {@include rounded;
+.rounded-menu {
+    @include rounded;
     text-align: start;
     width: 95%;
     height: 60px;
     background-color: white;
     position: relative;
-    &:active + .rounded-menu__bloc{transform: scale(2,0.5);}
+    &:active + .rounded-menu__bloc {
+        transform: scale(2, 0.5);
+    }
 }
-.rounded-menu__bloc{position: absolute;
+.rounded-menu__bloc {
+    position: absolute;
     right: 0;
-    border:solid;
-border-color: $color-tertiary;
-background-color: $color-tertiary;
-width: 100px;
-height: 50px;
-transition: transform 500ms ease-in-out;
+    border: solid;
+    border-color: $color-tertiary;
+    background-color: $color-tertiary;
+    width: 100px;
+    height: 50px;
+    transition: transform 500ms ease-in-out;
 }
 
 .prix {
@@ -116,9 +117,7 @@ ol {
     flex-direction: column;
     justify-content: center;
     list-style-type: none;
-    
 }
-
 
 .menu-p3__list {
     width: 20px;
@@ -131,10 +130,9 @@ ol {
     color: white;
     z-index: 2;
     position: absolute;
-    left:-7px;
+    left: -7px;
     top: 17px;
 }
-
 
 .fonc {
     position: absolute;
@@ -162,7 +160,6 @@ ol {
         justify-content: space-around;
         flex-wrap: wrap;
     }
-
 }
 
 .menus {
@@ -174,8 +171,10 @@ ol {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
-.menus__nom{font-family:'Shrikhand', cursive;
-font-size: 1.5em;}
+.menus__nom {
+    font-family: "Shrikhand", cursive;
+    font-size: 1.5em;
+}
 
 .menus__titres {
     font-weight: normal;
@@ -194,7 +193,7 @@ font-size: 1.5em;}
     right: 30px;
     bottom: 40px;
     transition: all 3s;
-   
+
     &:hover {
         font-weight: bold;
         color: $color-secondary;
@@ -217,7 +216,6 @@ font-size: 1.5em;}
     border-radius: 30px;
     background-color: white;
     margin-bottom: 20px;
-  
 }
 .nouveau {
     border: solid;
@@ -237,7 +235,7 @@ footer {
 
 .footer__ohmyfood {
     color: white;
-    font-family: 'Shrikhand', cursive;
+    font-family: "Shrikhand", cursive;
 }
 
 .footer__contact {
