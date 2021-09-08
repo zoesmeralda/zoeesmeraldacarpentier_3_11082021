@@ -13,9 +13,11 @@ $background-color: #f2f2f2;
     box-shadow: 6px 6px 6px lightgrey;
     margin-bottom: 15px;
 }
+html,body{margin:0;}
 
 * {
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
 
 a {
@@ -57,7 +59,8 @@ a {
     width: 100%;
 }
 
-.btn {
+.btn {display: flex;
+    justify-content: center;
     width: 50%;
     padding: 3.5%;
     border: solid;
@@ -78,7 +81,9 @@ a {
 .rounded-accueil {
     @include rounded;
     width: 100%;
+    background-color: #f2f2f2;
     font-weight: bold;
+    text-align: center;
     padding: 20px;
     position: relative;
     z-index: 1;
@@ -91,7 +96,7 @@ a {
     height: 60px;
     background-color: white;
     position: relative;
-    &:active + .rounded-menu__bloc {
+    &:hover + .rounded-menu__bloc {
         transform: scale(2, 0.5);
     }
 }
@@ -119,6 +124,11 @@ ol {
     list-style-type: none;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
 .menu-p3__list {
     width: 20px;
     border: solid;
