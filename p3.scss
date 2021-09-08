@@ -95,7 +95,7 @@ a {
         transform: scale(2, 0.5);
     }
 }
-.rounded-menu__bloc {
+.rounded-menu__bloc {display: inline-block;
     position: absolute;
     right: 0;
     border: solid;
