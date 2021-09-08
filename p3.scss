@@ -93,8 +93,7 @@ a {
     height: 60px;
     background-color: white;
     position: relative;
-
-    &:active+.rounded-menu__bloc{transform: scale(1);}
+    &:active + .rounded-menu__bloc{transform: scale(2,0.5);}
 }
 .rounded-menu__bloc{position: absolute;
     right: 0;
@@ -103,6 +102,7 @@ border-color: $color-tertiary;
 background-color: $color-tertiary;
 width: 100px;
 height: 50px;
+transition: transform 500ms ease-in-out;
 }
 
 .prix {
@@ -193,9 +193,10 @@ font-size: 1.5em;}
     position: absolute;
     right: 30px;
     bottom: 40px;
-    transition: all 450ms;
-    font-weight: bold;
-    &:active {
+    transition: all 3s;
+   
+    &:hover {
+        font-weight: bold;
         color: $color-secondary;
     }
 }

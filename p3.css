@@ -95,8 +95,8 @@ a {
 }
 
 .rounded-menu:active + .rounded-menu__bloc {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(2, 0.5);
+          transform: scale(2, 0.5);
 }
 
 .rounded-menu__bloc {
@@ -107,6 +107,10 @@ a {
   background-color: #99e2d0;
   width: 100px;
   height: 50px;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .prix {
@@ -221,12 +225,12 @@ ol {
   position: absolute;
   right: 30px;
   bottom: 40px;
-  -webkit-transition: all 450ms;
-  transition: all 450ms;
-  font-weight: bold;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
-.heart:active {
+.heart:hover {
+  font-weight: bold;
   color: #ff79da;
 }
 
