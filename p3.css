@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-html, body {
+html,
+body {
   margin: 0;
 }
 
@@ -53,14 +54,14 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-c: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 50%;
   padding: 3.5%;
-  border: solid;
-  border-width: 1px;
-  border-color: transparent;
+  margin-left: 25%;
+  border: none;
   border-radius: 100px;
   color: white;
   -webkit-box-shadow: 6px 6px 6px lightgrey;
@@ -73,7 +74,8 @@ a {
 .btn:hover {
   -webkit-box-shadow: 10px 10px 10px darkgrey;
           box-shadow: 10px 10px 10px darkgrey;
-  background-color: linear-gradient(#b68ee7, lightpink);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 121, 218, 0.8)), to(rgba(147, 86, 220, 0.8)));
+  background: linear-gradient(to bottom, rgba(255, 121, 218, 0.8) 0%, rgba(147, 86, 220, 0.8) 100%);
 }
 
 .rounded-accueil {
@@ -102,30 +104,27 @@ a {
           box-shadow: 6px 6px 6px lightgrey;
   margin-bottom: 15px;
   text-align: start;
+  text-indent: 10px;
   width: 95%;
   height: 60px;
   background-color: white;
   position: relative;
 }
 
-.rounded-menu:hover + .rounded-menu__bloc {
-  -webkit-transform: scale(2, 0.5);
-          transform: scale(2, 0.5);
-}
-
 .rounded-menu__bloc {
   display: inline-block;
-  position: absolute;
-  right: 0;
   border: solid;
   border-color: #99e2d0;
   background-color: #99e2d0;
-  width: 100px;
+  width: 50px;
   height: 50px;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.rounded-menu__bloc:hover {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .prix {
@@ -135,6 +134,7 @@ a {
 }
 
 ol {
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,6 +146,8 @@ ol {
       -ms-flex-pack: center;
           justify-content: center;
   list-style-type: none;
+  list-style: none;
+  padding-left: 0;
 }
 
 ul {
@@ -245,13 +247,32 @@ ul {
   position: absolute;
   right: 30px;
   bottom: 40px;
-  -webkit-transition: all 3s;
-  transition: all 3s;
 }
 
 .heart:hover {
   font-weight: bold;
   color: #ff79da;
+  opacity: 1;
+  -webkit-transition: 3s ease-in-out;
+  transition: 3s ease-in-out;
+}
+
+@-webkit-keyframes color {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes color {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .resto {

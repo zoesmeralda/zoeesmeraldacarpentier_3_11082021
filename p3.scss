@@ -13,7 +13,11 @@ $background-color: #f2f2f2;
     box-shadow: 6px 6px 6px lightgrey;
     margin-bottom: 15px;
 }
-html,body{margin:0;}
+
+html,
+body {
+    margin: 0;
+}
 
 * {
     font-family: "Roboto", sans-serif;
@@ -39,6 +43,7 @@ a {
     width: 40%;
     background-color: white;
 }
+
 .heading-p3__titre {
     font-size: 0.7em;
     font-weight: 900;
@@ -59,22 +64,24 @@ a {
     width: 100%;
 }
 
-.btn {display: flex;
+.btn {
+    display: flex;
+    align-c: center;
     justify-content: center;
     width: 50%;
     padding: 3.5%;
-    border: solid;
-    border-width: 1px;
-    border-color: transparent;
+    margin-left:25% ;
+    border: none;
     border-radius: 100px;
     color: white;
     box-shadow: 6px 6px 6px lightgrey;
     background: linear-gradient($color-secondary, $color-primary);
     position: relative;
 
+
     &:hover {
         box-shadow: 10px 10px 10px darkgrey;
-        background-color: linear-gradient(#b68ee7, lightpink);
+        background: linear-gradient(to bottom, rgba(255, 121, 218, 0.8)0%, rgba(147, 86, 220, 0.8) 100%);
     }
 }
 
@@ -92,23 +99,27 @@ a {
 .rounded-menu {
     @include rounded;
     text-align: start;
+    text-indent: 10px;
     width: 95%;
     height: 60px;
     background-color: white;
     position: relative;
-    &:hover + .rounded-menu__bloc {
-        transform: scale(2, 0.5);
-    }
+
+
 }
-.rounded-menu__bloc {display: inline-block;
-    position: absolute;
-    right: 0;
+
+.rounded-menu__bloc {
+    display: inline-block;
     border: solid;
     border-color: $color-tertiary;
     background-color: $color-tertiary;
-    width: 100px;
+    width: 50px;
     height: 50px;
-    transition: transform 500ms ease-in-out;
+    transform: scaleX(0);
+
+    &:hover {
+        transform: scaleX(1);
+    }
 }
 
 .prix {
@@ -118,17 +129,20 @@ a {
 }
 
 ol {
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     list-style-type: none;
+    list-style: none;
+    padding-left: 0;
 }
 
 ul {
     list-style: none;
     padding-left: 0;
-  }
-  
+}
+
 .menu-p3__list {
     width: 20px;
     border: solid;
@@ -164,6 +178,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @media only screen and (min-width: 1224px) {
         display: flex;
         flex-direction: row;
@@ -181,6 +196,7 @@ ul {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
+
 .menus__nom {
     font-family: "Shrikhand", cursive;
     font-size: 1.5em;
@@ -202,13 +218,39 @@ ul {
     position: absolute;
     right: 30px;
     bottom: 40px;
-    transition: all 3s;
+    
+    
+   
 
     &:hover {
         font-weight: bold;
-        color: $color-secondary;
+        color:$color-secondary;
+        opacity: 1;
+
+        transition: 3s ease-in-out;
+
+        
     }
 }
+
+@keyframes color{
+
+    0%{
+
+        opacity: 0;
+
+    }
+
+    100%{
+
+        opacity: 1;
+    }
+
+
+
+}
+
+
 
 .resto {
     width: 100%;
@@ -227,6 +269,7 @@ ul {
     background-color: white;
     margin-bottom: 20px;
 }
+
 .nouveau {
     border: solid;
     border-color: $color-tertiary;
