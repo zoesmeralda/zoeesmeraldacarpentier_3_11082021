@@ -18,6 +18,20 @@ $background-color: #f2f2f2;
 }
 
 
+.loader {
+    border: 16px solid $color-primary; 
+    border-top: 16px solid $color-secondary; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    animation: spin 2s linear 3s;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 
 
@@ -25,37 +39,17 @@ html,
 body {
     margin: 0px 0px 0px 0px;
     padding:0;
+animation: body-delay 0ms 3s both;
+   
 }
 
-.loader {
-    color: #ffffff;
-    font-size: 90px;
-    text-indent: -9999em;
-    overflow: hidden;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    margin: 72px auto;
-    position: relative;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation:  1.7s infinite ease, round 1.7s infinite ease;
-    animation: 1.7s infinite ease, round 1.7s infinite ease;
-  }
-  .loader {
-    border: 16px solid $color-primary; /* Light grey */
-    border-top: 16px solid $color-secondary; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+@keyframes body-delay {
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+    
+}
+
+
 * {
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
@@ -66,7 +60,7 @@ a {
     color: black;
 }
 
-.logo {
+.logo {                                                                  
     width: 40%;
     margin-left: 30%;
 }
