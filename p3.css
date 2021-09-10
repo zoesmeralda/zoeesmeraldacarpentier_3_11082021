@@ -2,7 +2,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html,
 body {
-  margin: 0;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+}
+
+.loader {
+  color: #ffffff;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: 1.7s infinite ease, round 1.7s infinite ease;
+  animation: 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+.loader {
+  border: 16px solid #9356dc;
+  /* Light grey */
+  border-top: 16px solid #ff79da;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 * {
@@ -18,6 +69,7 @@ a {
 
 .logo {
   width: 40%;
+  margin-left: 30%;
 }
 
 .heading-p3 {
@@ -54,7 +106,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-c: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -91,6 +142,7 @@ a {
   font-weight: bold;
   text-align: center;
   padding: 20px;
+  margin-left: 10px;
   position: relative;
   z-index: 1;
 }
@@ -118,8 +170,6 @@ a {
   background-color: #99e2d0;
   width: 50px;
   height: 50px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
 }
 
 .rounded-menu__bloc:hover {
@@ -158,8 +208,7 @@ ul {
 .menu-p3__list {
   width: 20px;
   border: solid;
-  border-radius: 100px;
-  padding: 4px 2px 4px 2px;
+  border-radius: 50%;
   border-color: #9356dc;
   background-color: #9356dc;
   text-align: center;
@@ -197,6 +246,8 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 14px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 1224px) {
@@ -249,12 +300,18 @@ ul {
   bottom: 40px;
 }
 
-.heart:hover {
-  font-weight: bold;
-  color: #ff79da;
+.heart:hover::after {
   opacity: 1;
-  -webkit-transition: 3s ease-in-out;
-  transition: 3s ease-in-out;
+}
+
+.heart::after {
+  content: "";
+  font-weight: bold;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
 }
 
 @-webkit-keyframes color {
@@ -291,6 +348,12 @@ ul {
   border-radius: 30px;
   background-color: white;
   margin-bottom: 20px;
+  -webkit-box-shadow: 6px 6px 6px gray;
+          box-shadow: 6px 6px 6px gray;
+}
+
+.cartes__noms {
+  text-indent: 10px;
 }
 
 .nouveau {
@@ -305,16 +368,19 @@ ul {
 }
 
 footer {
+  text-indent: 10px;
   background-color: #3d3a3a;
   color: white;
 }
 
 .footer__ohmyfood {
+  font-size: 1.2em;
   color: white;
   font-family: "Shrikhand", cursive;
 }
 
 .footer__contact {
+  text-indent: 10px;
   text-decoration: none;
   color: white;
 }
