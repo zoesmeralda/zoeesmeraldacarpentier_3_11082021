@@ -7,8 +7,8 @@
   width: 120px;
   height: 120px;
   overflow: hidden;
-  -webkit-animation: spin 2s linear 3s;
-          animation: spin 2s linear 3s;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
 }
 
 @-webkit-keyframes spin {

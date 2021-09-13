@@ -27,7 +27,8 @@ $breakpoints-tablet:768px;
     width: 120px;
     height: 120px;
     overflow: hidden;
-    animation: spin 2s linear 3s;
+    animation: spin 2s linear infinite;
+    
   }
   
   @keyframes spin {
@@ -35,6 +36,9 @@ $breakpoints-tablet:768px;
     100% { transform: rotate(360deg); }
   }
 
+  
+      
+  
 
 
 html,
