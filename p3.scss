@@ -21,8 +21,8 @@ $breakpoints-tablet:768px;
 
 
 .loader {
-    border: 16px solid $color-primary; 
-    border-top: 16px solid $color-secondary; 
+    border: 16px solid $color-secondary; 
+    border-top: 16px solid $color-primary; 
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -32,9 +32,11 @@ $breakpoints-tablet:768px;
   }
   
   @keyframes spin {
-    0% { transform: rotate(0deg); }
+    0% { transform: rotate(0deg); 
+    opacity: 1;}
     
     100% { transform: rotate(360deg);
+        opacity: 0;
      }
   }
 
@@ -58,10 +60,7 @@ body {
     100%{
         transform: scale(1);
     }
-    
-    
-
-}
+    }
 
 
 * {
@@ -93,6 +92,7 @@ a {
 .heading-p3__titre {
     font-size: 0.7em;
     font-weight: 900;
+   
 }
 
 .heading-p3__map {
@@ -155,7 +155,8 @@ a {
 
 }
 
-.menus__entrees{ animation: menu-delay 4s 450ms both; }
+.menus__entrees{ animation: menu-delay 4s 450ms both;}
+   
 
 .menus__plats{  animation: menu-delay 5s 450ms both; }
 
@@ -291,7 +292,8 @@ ul {
 
 .menus__ul {
     list-style-type: none;
-}
+    }
+
 
 .heart {
     position: absolute;
