@@ -4,11 +4,8 @@ $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $background-color: #f2f2f2;
-$breakpoints-desktop:1224px;
-$breakpoints-tablet:768px;
-
-
-
+$breakpoints-desktop: 1224px;
+$breakpoints-tablet: 768px;
 
 @mixin rounded {
     border: solid;
@@ -19,49 +16,43 @@ $breakpoints-tablet:768px;
     margin-bottom: 15px;
 }
 
-
 .loader {
-    border: 16px solid $color-secondary; 
-    border-top: 16px solid $color-primary; 
+    border: 16px solid $color-secondary;
+    border-top: 16px solid $color-primary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
     overflow: hidden;
     animation: spin 2s linear infinite;
-    
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); 
-    opacity: 1;}
-    
-    100% { transform: rotate(360deg);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
         opacity: 0;
-     }
-  }
-
-  
-      
-  
-
+    }
+}
 
 html,
 body {
     margin: 0px 0px 0px 0px;
-    padding:0;
+    padding: 0;
     animation: body-delay 0ms 3s both;
-
 }
 
 @keyframes body-delay {
-    0%{
+    0% {
         transform: scale(0);
     }
-    100%{
+    100% {
         transform: scale(1);
     }
-    }
-
+}
 
 * {
     font-family: "Roboto", sans-serif;
@@ -73,7 +64,7 @@ a {
     color: black;
 }
 
-.logo {                                                                  
+.logo {
     width: 40%;
     margin-left: 30%;
 }
@@ -92,7 +83,6 @@ a {
 .heading-p3__titre {
     font-size: 0.7em;
     font-weight: 900;
-   
 }
 
 .heading-p3__map {
@@ -115,7 +105,7 @@ a {
     justify-content: center;
     width: 50%;
     padding: 3.5%;
-    margin-left:25% ;
+    margin-left: 25%;
     border: none;
     border-radius: 100px;
     color: white;
@@ -123,10 +113,9 @@ a {
     background: linear-gradient($color-secondary, $color-primary);
     position: relative;
 
-
     &:hover {
         box-shadow: 10px 10px 10px darkgrey;
-        background: linear-gradient(to bottom, rgba(255, 121, 218, 0.8)0%, rgba(147, 86, 220, 0.8) 100%);
+        background: linear-gradient(to bottom, rgba(255, 121, 218, 0.8) 0%, rgba(147, 86, 220, 0.8) 100%);
     }
 }
 
@@ -140,8 +129,10 @@ a {
     margin-left: 10px;
     position: relative;
     z-index: 1;
-    @media only screen and (min-width: $breakpoints-desktop){padding-left: 70px;
-    padding-right: 70px;}
+    @media only screen and (min-width: $breakpoints-desktop) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
 }
 
 .rounded-menu {
@@ -151,25 +142,37 @@ a {
     width: 95%;
     height: 60px;
     background-color: white;
-   
-
 }
 
-.menus__entrees{ animation: menu-delay 4s 450ms both;}
-   
+.menus__entrees {
+    animation: menu-delay 4s 450ms both;
+}
 
-.menus__plats{  animation: menu-delay 5s 450ms both; }
+.menus__plats {
+    animation: menu-delay 5s 450ms both;
+}
 
-.menus__desserts{  animation: menu-delay 6s 450ms both; }
+.menus__desserts {
+    animation: menu-delay 6s 450ms both;
+}
 
 @keyframes menu-delay {
-    0% {transform:scale(0);}
-    10%{transform: scale(0.1);}
-    30%{transform: scale(0.3);}
-    60%{transform: scale(0.6);}
-    100%{transform: scale(1);}
+    0% {
+        transform: scale(0);
     }
-    
+    10% {
+        transform: scale(0.1);
+    }
+    30% {
+        transform: scale(0.3);
+    }
+    60% {
+        transform: scale(0.6);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 .rounded-menu__bloc {
     display: inline-block;
@@ -180,15 +183,15 @@ a {
     border-bottom-right-radius: 20px;
     width: 50px;
     height: 60px;
-   
-    
+
     &:hover {
         transform: scaleX(1);
     }
 }
-.rounded-menu__bloc .fas{ 
-text-align: center;
-color: white;}
+.rounded-menu__bloc .fas {
+    text-align: center;
+    color: white;
+}
 
 .prix {
     font-weight: bold;
@@ -205,10 +208,12 @@ ol {
     list-style: none;
     padding-left: 0;
 
-@media only screen and (min-width: $breakpoints-desktop){display: flex;
-flex-direction: row;
-justify-content: space-around;
-width: 100%;}
+    @media only screen and (min-width: $breakpoints-desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
 ul {
@@ -220,7 +225,7 @@ ul {
     width: 20px;
     border: solid;
     border-radius: 50%;
-    
+
     border-color: $color-primary;
     background-color: $color-primary;
     text-align: center;
@@ -259,13 +264,13 @@ ul {
         flex-direction: row;
         justify-content: space-around;
         width: 100%;
-
     }
 }
-.cartes___titre{
-
-    @media only screen and (min-width: $breakpoints-desktop){display: flex;
-    justify-content: center;}
+.cartes___titre {
+    @media only screen and (min-width: $breakpoints-desktop) {
+        display: flex;
+        justify-content: center;
+    }
 }
 .menus {
     width: 100%;
@@ -292,46 +297,36 @@ ul {
 
 .menus__ul {
     list-style-type: none;
-    }
-
+}
 
 .heart {
     position: absolute;
     right: 30px;
     bottom: 40px;
-    &:hover{
-        &::after{opacity: 1;}
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
     }
-    
+
     &::after {
         content: "";
         font-weight: bold;
         opacity: 0;
-        background: linear-gradient($color-secondary,$color-primary);
+        background: linear-gradient($color-secondary, $color-primary);
         transition: opacity 3s;
-
-        
     }
 }
 
-@keyframes color{
-
-    0%{
-
+@keyframes color {
+    0% {
         opacity: 0;
-
     }
 
-    100%{
-
+    100% {
         opacity: 1;
     }
-
-
-
 }
-
-
 
 .resto {
     width: 100%;
@@ -350,10 +345,11 @@ ul {
     background-color: white;
     margin-bottom: 20px;
     box-shadow: 6px 6px 6px gray;
- 
 }
 
-.cartes__noms{text-indent: 10px;}
+.cartes__noms {
+    text-indent: 10px;
+}
 .nouveau {
     border: solid;
     border-color: $color-tertiary;
@@ -369,12 +365,12 @@ footer {
     text-indent: 10px;
     background-color: rgb(61, 58, 58);
     color: white;
-    
-    @media only screen and (min-width: $breakpoints-desktop){display: flex;
-        justify-content: space-around;}
-    }
-    
 
+    @media only screen and (min-width: $breakpoints-desktop) {
+        display: flex;
+        justify-content: space-around;
+    }
+}
 
 .footer__ohmyfood {
     font-size: 1.2em;
