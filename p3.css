@@ -250,11 +250,35 @@ a {
   border-bottom-right-radius: 20px;
   width: 50px;
   height: 60px;
+  position: absolute;
+  right: 10px;
 }
 
 .rounded-menu__bloc:hover {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-animation: bloc  2s 1s both;
+          animation: bloc  2s 1s both;
+}
+
+@-webkit-keyframes bloc {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes bloc {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 .rounded-menu__bloc .fas {
