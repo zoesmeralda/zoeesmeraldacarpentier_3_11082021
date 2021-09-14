@@ -250,6 +250,7 @@ a {
   border-bottom-right-radius: 20px;
   width: 50px;
   height: 60px;
+  margin-left: 2%;
   position: absolute;
   right: 10px;
 }
@@ -284,6 +285,30 @@ a {
 .rounded-menu__bloc .fas {
   text-align: center;
   color: white;
+  -webkit-animation: rotate 2s 2s both;
+          animation: rotate 2s 2s both;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(Odeg);
+            transform: rotate(Odeg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(Odeg);
+            transform: rotate(Odeg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .prix {
@@ -415,11 +440,13 @@ ul {
 }
 
 .menus__titres {
+  width: 10%;
   font-weight: normal;
   font-size: 1em;
   color: gray;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  border-bottom: solid;
+  border-color: #99e2d0;
+  border-width: thick;
   -webkit-text-decoration-color: #99e2d0;
           text-decoration-color: #99e2d0;
 }
@@ -432,20 +459,9 @@ ul {
   position: absolute;
   right: 30px;
   bottom: 40px;
-}
-
-.heart:hover::after {
-  opacity: 1;
-}
-
-.heart::after {
-  content: "";
   font-weight: bold;
-  opacity: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
-  -webkit-transition: opacity 3s;
-  transition: opacity 3s;
+  color: linear-gradient(#ff79da, #9356dc);
+  /* &:hover {*/
 }
 
 @-webkit-keyframes color {
@@ -502,7 +518,7 @@ ul {
 }
 
 footer {
-  text-indent: 10px;
+  padding-left: 10px;
   background-color: #3d3a3a;
   color: white;
 }
@@ -524,7 +540,6 @@ footer {
 }
 
 .footer__contact {
-  text-indent: 10px;
   text-decoration: none;
   color: white;
 }

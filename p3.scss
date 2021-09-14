@@ -185,6 +185,7 @@ a {
     border-bottom-right-radius: 20px;
     width: 50px;
     height: 60px;
+    margin-left: 2%;
    position: absolute;
    right: 10px;
 
@@ -198,6 +199,12 @@ a {
 .rounded-menu__bloc .fas {
     text-align: center;
     color: white;
+    animation: rotate 2s 2s both;
+}
+
+@keyframes rotate {0% {transform: rotate(Odeg) ;}
+100%{transform: rotate(360deg);}
+    
 }
 
 .prix {
@@ -295,10 +302,13 @@ ul {
 }
 
 .menus__titres {
+    width: 10%;
     font-weight: normal;
     font-size: 1em;
     color: gray;
-    text-decoration-line: underline;
+   border-bottom: solid;
+   border-color: $color-tertiary;
+   border-width: thick;
     text-decoration-color: $color-tertiary;
 }
 
@@ -310,19 +320,9 @@ ul {
     position: absolute;
     right: 30px;
     bottom: 40px;
-    &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    &::after {
-        content: "";
-        font-weight: bold;
-        opacity: 0;
-        background: linear-gradient($color-secondary, $color-primary);
-        transition: opacity 3s;
-    }
+    font-weight: bold;
+    color: linear-gradient($color-secondary, $color-primary);
+   /* &:hover {*/
 }
 
 @keyframes color {
@@ -369,7 +369,7 @@ ul {
 }
 
 footer {
-    text-indent: 10px;
+    padding-left: 10px;
     background-color: rgb(61, 58, 58);
     color: white;
 
@@ -386,7 +386,7 @@ footer {
 }
 
 .footer__contact {
-    text-indent: 10px;
+    
     text-decoration: none;
     color: white;
 }
