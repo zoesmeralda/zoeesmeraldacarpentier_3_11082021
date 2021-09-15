@@ -15,7 +15,14 @@ $breakpoints-tablet: 768px;
     box-shadow: 6px 6px 6px lightgrey;
     margin-bottom: 15px;
 }
-
+.loading{ position: fixed;
+top:0;
+left:0;
+height:100%;
+width:100%;
+z-index:10000;
+background-color: red;
+animation : loader-delay 3s ;} 
 .loader {
     border: 16px solid $color-secondary;
     border-top: 16px solid $color-primary;
@@ -42,15 +49,16 @@ html,
 body {
     margin: 0px 0px 0px 0px;
     padding: 0;
-    animation: body-delay 0ms 3s both;
+  
 }
 
-@keyframes body-delay {
+@keyframes loader-delay {
     0% {
-        transform: scale(0);
+        opacity:1;
     }
     100% {
-        transform: scale(1);
+        opacity:0;
+        display: none;
     }
 }
 
