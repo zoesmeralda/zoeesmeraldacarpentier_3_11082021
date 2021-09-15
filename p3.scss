@@ -276,11 +276,13 @@ ul {
     @media only screen and (min-width: $breakpoints-desktop) {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin-top: 30px;
         width: 100%;
     }
 }
-.cartes___titre {
+.cartes__titre {height: 20px;
+    
     @media only screen and (min-width: $breakpoints-desktop) {
         display: flex;
         justify-content: center;
@@ -352,8 +354,12 @@ ul {
     background-color: white;
     margin-bottom: 20px;
     box-shadow: 6px 6px 6px gray;
-}
 
+ @media only screen and (min-width: $breakpoints-desktop) {
+        
+        margin-top: 60px;
+        }
+}
 .cartes__noms {
     text-indent: 10px;
 }
