@@ -281,10 +281,14 @@ ul {
     @media only screen and (min-width: $breakpoints-desktop) {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
         margin-top: 30px;
         width: 100%;
     }
+
+    .cartes__restaurants{
+        @media only screen and (min-width: $breakpoints-desktop) {width:50% ;}
+     }
 }
 .cartes__titre {height: 20px;
     
@@ -328,9 +332,8 @@ ul {
     right: 30px;
     bottom: 40px;
     font-weight: bold;
-    background-image: linear-gradient($color-secondary, $color-primary);
-   background-clip: text;
-   color: transparent;
+    background-color: linear-gradient($color-secondary, $color-primary);
+  font-weight: bold;
   &:hover{ animation: color 1s both;}
 }
 
