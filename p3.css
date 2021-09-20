@@ -147,6 +147,7 @@ a {
           box-shadow: 6px 6px 6px lightgrey;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
+  cursor: pointer;
   position: relative;
 }
 
@@ -244,7 +245,8 @@ a {
   border-bottom-right-radius: 20px;
   width: 50px;
   height: 60px;
-  margin-left: 2%;
+  margin-left: 5%;
+  cursor: pointer;
   position: absolute;
   right: 0;
   z-index: 11000;
@@ -451,6 +453,8 @@ ul {
   position: absolute;
   right: 20px;
   top: 20px;
+  margin-bottom: 0;
+  cursor: pointer;
 }
 
 .menus__nom {
@@ -481,6 +485,7 @@ ul {
   font-weight: bold;
   background-color: linear-gradient(#ff79da, #9356dc);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .heart:hover {
