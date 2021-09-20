@@ -15,29 +15,32 @@ $breakpoints-tablet: 768px;
     box-shadow: 6px 6px 6px lightgrey;
     margin-bottom: 15px;
 }
-.loading{ position: fixed;
-top:0;
-left:0;
-height:100%;
-width:100%;
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 
-z-index:10000;
-background-color:white;
-animation : loader-delay 3s both;} 
+    z-index: 10000;
+    background-color: white;
+    animation: loader-delay 3s both;
+}
 .loader {
     border: 16px solid $color-secondary;
     border-top: 16px solid $color-primary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
- margin-left: 32%;
- margin-top: 20%;
+    margin-left: 32%;
+    margin-top: 20%;
     overflow: hidden;
     animation: spin 2s linear infinite;
 
-
-@media only screen and (min-width: $breakpoints-desktop){margin-left:45%;
-    margin-top: 20%;}  
+    @media only screen and (min-width: $breakpoints-desktop) {
+        margin-left: 45%;
+        margin-top: 20%;
+    }
 }
 
 @keyframes spin {
@@ -56,15 +59,14 @@ html,
 body {
     margin: 0px 0px 0px 0px;
     padding: 0;
-  
 }
 
 @keyframes loader-delay {
     0% {
-        opacity:1;
+        opacity: 1;
     }
     100% {
-        opacity:0;
+        opacity: 0;
         visibility: hidden;
     }
 }
@@ -82,6 +84,22 @@ a {
 .logo {
     width: 40%;
     margin-left: 30%;
+}
+
+.logo-menu {
+    font-family: "Shrikhand", cursive;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 0;
+    padding: 0;
+    background-color: yellow;
+}
+.arrow {
+    margin-bottom: 0px;
+    font-size: 30px;
+    width: 10%;
 }
 
 .heading-p3 {
@@ -113,9 +131,7 @@ a {
 
 .heading-img {
     width: 100%;
-    
 }
-
 
 .btn {
     display: flex;
@@ -163,7 +179,6 @@ a {
     position: relative;
 }
 
-
 .menus__entrees {
     animation: menu-delay 4s 450ms both;
 }
@@ -180,14 +195,14 @@ a {
     0% {
         transform: scale(0);
     }
-    
+
     100% {
         transform: scale(1);
     }
 }
 
 .rounded-menu__bloc {
-    display: inline-block;
+    display: block;
     border: solid;
     border-color: $color-tertiary;
     background-color: $color-tertiary;
@@ -197,27 +212,39 @@ a {
     height: 60px;
     margin-left: 5%;
     cursor: pointer;
-   position: absolute;
-   right: 0;
-   z-index: 11000;
+    position: absolute;
+    right: 0;
+    z-index: 11000;
 
-    &:hover {animation:bloc  2s 1s both;
+    &:hover {
+        animation: bloc 2s 1s both;
+        display: inline-block;
         
     }
-    @keyframes bloc { 0% {transform: scaleX(0);}
-    100% {transform: scaleX(1);}
+    @keyframes bloc {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
 }
-}
-.rounded-menu__bloc .fas {display: flex;
+.rounded-menu__bloc .fas {
+    display: flex;
     justify-content: center;
-    
+
     color: white;
     animation: icon-rotate 3s 2s both;
 }
 
-@keyframes icon-rotate {0% {transform: rotate(Odeg) ;}
-100%{transform: rotate(360deg);}
-    
+@keyframes icon-rotate {
+    0% {
+        transform: rotate(Odeg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .prix {
@@ -291,16 +318,19 @@ ul {
         flex-direction: row;
         justify-content: start;
         margin-top: 30px;
-        
+
         width: 100%;
     }
 
-    .cartes__restaurants{
-        @media only screen and (min-width: $breakpoints-desktop) {width:50% ;}
-     }
+    .cartes__restaurants {
+        @media only screen and (min-width: $breakpoints-desktop) {
+            width: 50%;
+        }
+    }
 }
-.cartes__titre {height: 20px;
-    
+.cartes__titre {
+    height: 20px;
+
     @media only screen and (min-width: $breakpoints-desktop) {
         display: flex;
         justify-content: center;
@@ -308,7 +338,7 @@ ul {
 }
 .menus {
     width: 100%;
-
+    margin-top: -30px;
     background-color: $background-color;
     border: solid;
     border-color: $background-color;
@@ -316,11 +346,13 @@ ul {
     border-top-right-radius: 30px;
     position: relative;
 }
-.menus__heart{ position: absolute;
-right: 20px;
-top: 20px;
-margin-bottom: 0;
-cursor: pointer;}
+.menus__heart {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
 
 .menus__nom {
     font-family: "Shrikhand", cursive;
@@ -328,13 +360,13 @@ cursor: pointer;}
 }
 
 .menus__titres {
-    width: 10%;
+    width: 30px;
     font-weight: normal;
     font-size: 1em;
     color: gray;
-   border-bottom: solid;
-   border-color: $color-tertiary;
-   border-width: thick;
+    border-bottom: solid;
+    border-color: $color-tertiary;
+    border-width: thick;
     text-decoration-color: $color-tertiary;
 }
 
@@ -348,11 +380,12 @@ cursor: pointer;}
     bottom: 40px;
     font-weight: bold;
     background-color: linear-gradient($color-secondary, $color-primary);
-  font-weight: bold;
-  cursor: pointer;
-  &:hover{ animation: color 1s both;}
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+        animation: color 1s both;
+    }
 }
-
 
 @keyframes color {
     0% {
@@ -382,10 +415,9 @@ cursor: pointer;}
     margin-bottom: 20px;
     box-shadow: 6px 6px 6px gray;
 
- @media only screen and (min-width: $breakpoints-desktop) {
-        
+    @media only screen and (min-width: $breakpoints-desktop) {
         margin-top: 60px;
-        }
+    }
 }
 .cartes__noms {
     text-indent: 10px;
@@ -419,7 +451,6 @@ footer {
 }
 
 .footer__contact {
-    
     text-decoration: none;
     color: white;
 }
