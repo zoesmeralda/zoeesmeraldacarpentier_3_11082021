@@ -20,15 +20,17 @@ top:0;
 left:0;
 height:100%;
 width:100%;
+
 z-index:10000;
 background-color: red;
-animation : loader-delay 3s ;} 
+animation : loader-delay 3s both;} 
 .loader {
     border: 16px solid $color-secondary;
     border-top: 16px solid $color-primary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
+  
     overflow: hidden;
     animation: spin 2s linear infinite;
 }
@@ -58,7 +60,7 @@ body {
     }
     100% {
         opacity:0;
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -151,6 +153,7 @@ a {
     width: 95%;
     height: 60px;
     background-color: white;
+    position: relative;
 }
 
 
@@ -170,15 +173,7 @@ a {
     0% {
         transform: scale(0);
     }
-    10% {
-        transform: scale(0.1);
-    }
-    30% {
-        transform: scale(0.3);
-    }
-    60% {
-        transform: scale(0.6);
-    }
+    
     100% {
         transform: scale(1);
     }
@@ -195,7 +190,8 @@ a {
     height: 60px;
     margin-left: 2%;
    position: absolute;
-   right: 10px;
+   right: 0;
+   z-index: 11000;
 
     &:hover {animation:bloc  2s 1s both;
         
@@ -204,13 +200,14 @@ a {
     100% {transform: scaleX(1);}
 }
 }
-.rounded-menu__bloc .fas {
-    text-align: center;
+.rounded-menu__bloc .fas {display: flex;
+    justify-content: center;
+    
     color: white;
-    animation: rotate 2s 2s both;
+    animation: icon-rotate 3s 2s both;
 }
 
-@keyframes rotate {0% {transform: rotate(Odeg) ;}
+@keyframes icon-rotate {0% {transform: rotate(Odeg) ;}
 100%{transform: rotate(360deg);}
     
 }
@@ -331,8 +328,10 @@ ul {
     right: 30px;
     bottom: 40px;
     font-weight: bold;
-    color: linear-gradient($color-secondary, $color-primary);
-   /* &:hover {*/
+    background-image: linear-gradient($color-secondary, $color-primary);
+   background-clip: text;
+   color: transparent;
+  &:hover{ animation: color 1s both;}
 }
 
 @keyframes color {
