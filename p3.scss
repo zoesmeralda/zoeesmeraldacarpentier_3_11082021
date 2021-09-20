@@ -116,6 +116,7 @@ a {
     
 }
 
+
 .btn {
     display: flex;
     justify-content: center;
@@ -310,7 +311,11 @@ ul {
     border-color: $background-color;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    position: relative;
 }
+.menus__heart{ position: absolute;
+right: 20px;
+top: 20px;}
 
 .menus__nom {
     font-family: "Shrikhand", cursive;
@@ -341,6 +346,7 @@ ul {
   font-weight: bold;
   &:hover{ animation: color 1s both;}
 }
+
 
 @keyframes color {
     0% {

@@ -444,6 +444,13 @@ ul {
   border-color: #f2f2f2;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  position: relative;
+}
+
+.menus__heart {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .menus__nom {
