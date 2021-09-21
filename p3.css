@@ -307,12 +307,19 @@ a {
   position: absolute;
   right: 0;
   z-index: 11000;
+  -webkit-transform: scaleX(0.1);
+          transform: scaleX(0.1);
 }
 
 .rounded-menu__bloc:hover {
-  -webkit-animation: bloc 2s 1s both;
-          animation: bloc 2s 1s both;
-  display: inline-block;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
 }
 
 @-webkit-keyframes bloc {
@@ -564,7 +571,7 @@ ul {
   right: 30px;
   bottom: 40px;
   display: block;
-  color: #ff79da;
+  color: black;
   font-weight: bold;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
