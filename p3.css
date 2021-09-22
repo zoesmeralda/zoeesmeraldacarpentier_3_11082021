@@ -242,8 +242,6 @@ a {
   visibility: visible;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
   -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
   transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
   transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
@@ -320,8 +318,19 @@ a {
   position: absolute;
   right: 0;
   z-index: 11000;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
   -webkit-transform: scaleX(0.1);
           transform: scaleX(0.1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.rounded-menu__bloc:hover .fas {
+  -webkit-animation: icon-rotate 3s 2s both;
+          animation: icon-rotate 3s 2s both;
 }
 
 @-webkit-keyframes bloc {
@@ -357,8 +366,6 @@ a {
   margin-left: 5px;
   margin-right: 5px;
   color: white;
-  -webkit-animation: icon-rotate 3s 2s both;
-          animation: icon-rotate 3s 2s both;
 }
 
 @-webkit-keyframes icon-rotate {
