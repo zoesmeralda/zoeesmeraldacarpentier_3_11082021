@@ -186,6 +186,7 @@ a {
     @include rounded;
     text-align: start;
     text-indent: 10px;
+    text-overflow: ellipsis;
     width: 95%;
     height: 60px;
     background-color: white;
@@ -221,11 +222,11 @@ a {
 
 @keyframes menu-delay {
     0% {
-        transform: scale(0);
+        transform: scaleY(0);
     }
 
     100% {
-        transform: scale(1);
+        transform: scaleY(1);
     }
 }
 
@@ -243,6 +244,7 @@ a {
     cursor: pointer;
     position: absolute;
     right: 0;
+    top:0;
     z-index: 11000;
     transition-property: transform;
     transform: scaleX(0.1);
@@ -344,23 +346,26 @@ ul {
     padding-left: 14px;
     width: 100%;
 
-    @media only screen and (min-width: $breakpoints-desktop) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: 30px 0 0 0;
-        padding: 0 50px 0 -200px;
-
-        width: 100%;
-    }
+    
 }
+
+.cartes__ensemble{
+     @media only screen and (min-width: $breakpoints-desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 0 0 0;
+    padding: 0 50px 0 -200px;
+
+    width: 100%;
+}}
 .cartes__titre {
     height: 20px;
 
     @media only screen and (min-width: $breakpoints-desktop) {
         display: flex;
-        justify-content: center;
+     
     }
 }
 .menus {
@@ -413,21 +418,50 @@ ul {
     right: 30px;
     bottom: 40px;
     display: block;
-    //color: $color-primary;
-    font-weight: bold;
-
-    //background-clip: content-box;
+    font-weight: thin;
+    z-index: 1;
+    
     cursor: pointer;
-    &:hover {
-        animation: heart-color 2s 0s both;
-        font-weight: bold;
-        color: linear-gradient($color-secondary, $color-primary);
+
+    &:hover{
+
+        z-index: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 0;
+        
+        
     }
+   
 }
 .heart-full {
+    
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    color: $color-secondary;
     background: linear-gradient($color-secondary, $color-primary);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    transition-property: transform;
+    opacity:0;
+    transform-origin: bottom;
+    display: block;
+    z-index: 0;
+    
+
+    &:hover{
+        visibility: visible;
+        opacity:1;
+        transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+        z-index: 2;
+        
+    }
+    
+    
+
+    
+      
 }
 
 @keyframes heart-color {
@@ -458,9 +492,9 @@ ul {
     margin-bottom: 20px;
     box-shadow: 6px 6px 6px gray;
     @media only screen and (min-width: $breakpoints-desktop) {
-        width: 40%;
+        width: 48%;
 
-        margin: 50px 5px 20px 5px;
+        
     }
 }
 .cartes__noms {

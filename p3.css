@@ -232,6 +232,7 @@ a {
   margin-bottom: 15px;
   text-align: start;
   text-indent: 10px;
+  text-overflow: ellipsis;
   width: 95%;
   height: 60px;
   background-color: white;
@@ -283,23 +284,23 @@ a {
 
 @-webkit-keyframes menu-delay {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
 @keyframes menu-delay {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
@@ -317,6 +318,7 @@ a {
   cursor: pointer;
   position: absolute;
   right: 0;
+  top: 0;
   z-index: 11000;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
@@ -479,7 +481,7 @@ ul {
 }
 
 @media only screen and (min-width: 1224px) {
-  .cartes {
+  .cartes__ensemble {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -507,9 +509,6 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -576,22 +575,46 @@ ul {
   right: 30px;
   bottom: 40px;
   display: block;
-  font-weight: bold;
+  font-weight: thin;
+  z-index: 1;
   cursor: pointer;
 }
 
 .heart:hover {
-  -webkit-animation: heart-color 2s 0s both;
-          animation: heart-color 2s 0s both;
-  font-weight: bold;
-  color: linear-gradient(#ff79da, #9356dc);
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
 }
 
 .heart-full {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  color: #ff79da;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  opacity: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  display: block;
+  z-index: 0;
+}
+
+.heart-full:hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  z-index: 2;
 }
 
 @-webkit-keyframes heart-color {
@@ -634,8 +657,7 @@ ul {
 
 @media only screen and (min-width: 1224px) {
   .cartes__restaurants {
-    width: 40%;
-    margin: 50px 5px 20px 5px;
+    width: 48%;
   }
 }
 
