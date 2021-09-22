@@ -419,8 +419,8 @@ ul {
     //background-clip: content-box;
     cursor: pointer;
     &:hover {
-        // animation: heart-color 2s 0s both;
-        //font-weight: bold;
+        animation: heart-color 2s 0s both;
+        font-weight: bold;
         color: linear-gradient($color-secondary, $color-primary);
     }
 }

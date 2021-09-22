@@ -581,6 +581,9 @@ ul {
 }
 
 .heart:hover {
+  -webkit-animation: heart-color 2s 0s both;
+          animation: heart-color 2s 0s both;
+  font-weight: bold;
   color: linear-gradient(#ff79da, #9356dc);
 }
 
