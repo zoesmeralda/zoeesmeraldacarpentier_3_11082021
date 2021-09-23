@@ -227,6 +227,7 @@ a {
     @media only screen and (min-width: $breakpoints-desktop) {
         width: 400px;
     }
+
 }
 
 .intitulé{white-space: nowrap;
@@ -472,12 +473,12 @@ ul {
     
     cursor: pointer;
 
-    &:hover{
+    &:hover{color: transparent;
 
         z-index: 0;
         visibility: hidden;
         opacity: 0;
-        z-index: 0;
+        
         
         
     }
