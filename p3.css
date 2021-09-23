@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .loading {
@@ -150,6 +151,8 @@ a {
 .heading-img {
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (min-width: 1224px) {
@@ -232,6 +235,8 @@ a {
   margin-bottom: 15px;
   text-align: start;
   text-indent: 10px;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   width: 95%;
   height: 60px;
@@ -249,10 +254,20 @@ a {
   transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
 }
 
+.rounded-menu:hover .prix {
+  margin-right: 45px;
+}
+
 @media only screen and (min-width: 1224px) {
   .rounded-menu {
     width: 400px;
   }
+}
+
+.intitulé {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menus__entrees {
@@ -284,23 +299,27 @@ a {
 
 @-webkit-keyframes menu-delay {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes menu-delay {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -314,7 +333,6 @@ a {
   width: 50px;
   height: 60px;
   margin-left: 5.1%;
-  margin-top: 3px;
   cursor: pointer;
   position: absolute;
   right: 0;
@@ -331,8 +349,8 @@ a {
 }
 
 .rounded-menu__bloc:hover .fas {
-  -webkit-animation: icon-rotate 3s 2s both;
-          animation: icon-rotate 3s 2s both;
+  -webkit-animation: icon-rotate 2s 0s both;
+          animation: icon-rotate 2s 0s both;
 }
 
 @-webkit-keyframes bloc {
@@ -395,7 +413,8 @@ a {
 .prix {
   font-weight: bold;
   position: absolute;
-  right: 25px;
+  right: 10px;
+  bottom: 5px;
 }
 
 ol {
@@ -521,6 +540,7 @@ ul {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   position: relative;
+  padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 1224px) {
@@ -543,10 +563,49 @@ ul {
 
 .menus__heart {
   position: absolute;
+  display: block;
+  z-index: 1;
   right: 20px;
   top: 20px;
   margin-bottom: 0;
   cursor: pointer;
+}
+
+.menus__heart:hover {
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+}
+
+.heart-fullm {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  opacity: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  display: block;
+  z-index: 0;
+}
+
+.heart-fullm:hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  z-index: 2;
 }
 
 .menus__nom {
@@ -640,6 +699,8 @@ ul {
   height: 200px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cartes__restaurants {
@@ -680,6 +741,7 @@ footer {
   padding-left: 10px;
   background-color: #3d3a3a;
   color: white;
+  margin: 0;
 }
 
 @media only screen and (min-width: 1224px) {
