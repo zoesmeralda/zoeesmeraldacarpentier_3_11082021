@@ -8,384 +8,415 @@ $breakpoints-desktop: 1224px;
 $breakpoints-tablet: 768px;
 
 @mixin rounded {
-    border: solid;
-    border-width: thin;
-    border-color: transparent;
-    border-radius: 20px;
-    box-shadow: 6px 6px 6px lightgrey;
-    margin-bottom: 15px;
+  border: solid;
+  border-width: thin;
+  border-color: transparent;
+  border-radius: 20px;
+  box-shadow: 6px 6px 6px lightgrey;
+  margin-bottom: 15px;
 }
-@mixin heart-gradient {position: absolute;
-    right: 20px;
-    top: 20px;
-    color: $color-secondary;
-    background: linear-gradient($color-secondary, $color-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-    transition-property: transform;
-    opacity:0;
-    transform-origin: bottom;
-    display: block;
-    z-index: 0;
-    
+@mixin heart-gradient {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: $color-secondary;
+  background: linear-gradient($color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-property: transform;
+  opacity: 0;
+  transform-origin: bottom;
+  display: block;
+  z-index: 0;
 
-    &:hover{
-        visibility: visible;
-        opacity:1;
-        transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
-        z-index: 2;
-    
-}
+  &:hover {
+    visibility: visible;
+    opacity: 1;
+    transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+    z-index: 2;
+  }
 }
 .loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 
-    z-index: 10000;
-    background-color: white;
-    animation: loader-delay 3s both;
+  z-index: 10000;
+  background-color: white;
+  animation: loader-delay 3s both;
 }
 .loader {
-    border: 16px solid $color-secondary;
-    border-top: 16px solid $color-primary;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin-left: 32%;
-    margin-top: 20%;
-    overflow: hidden;
-    animation: spin 2s linear infinite;
+  border: 16px solid $color-secondary;
+  border-top: 16px solid $color-primary;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-left: 32%;
+  margin-top: 20%;
+  overflow: hidden;
+  animation: spin 2s linear infinite;
 
-    @media only screen and (min-width: $breakpoints-desktop) {
-        margin-left: 45%;
-        margin-top: 20%;
-    }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    margin-left: 45%;
+    margin-top: 20%;
+  }
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 
-    100% {
-        transform: rotate(360deg);
-        opacity: 0;
-    }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
 }
 
 html,
 body {
-    margin: 0px 0px 0px 0px;
-    padding: 0;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
 }
 
 @keyframes loader-delay {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 * {
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .logo {
-    width: 40%;
+  width: 40%;
+  margin-left: 20%;
+  @media only screen and (min-width: $breakpoints-desktop) {
     margin-left: 30%;
+  }
 }
 
 .logo-menu {
-    font-family: "Shrikhand", cursive;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 0;
-    padding: 0;
-    background-color: yellow;
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 0;
+  padding: 0;
+  background-color: yellow;
 }
 .arrow {
-    margin-bottom: 0px;
-    font-size: 30px;
-    width: 10%;
+  margin-bottom: 10px;
+
+  width: 10%;
+  @media only screen and (min-width: $breakpoints-desktop) {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+  }
 }
 
 .heading-p3 {
-    width: 100%;
+  width: 100%;
 
-    text-align: center;
+  text-align: center;
 }
 
 .heading-p3__logo {
-    width: 40%;
-    background-color: white;
+  width: 40%;
+  background-color: white;
 }
 
 .heading-p3__titre {
-    font-size: 0.7em;
-    font-weight: 900;
+  font-size: 0.7em;
+  font-weight: 900;
 }
 
 .heading-p3__map {
-    background-color: #d8d5d8;
-    padding: 1%;
+  background-color: #d8d5d8;
+  padding: 1%;
 }
 
 .heading-p3__background {
-    background-color: $background-color;
-    padding-bottom: 30px;
-    padding-top: 30px;
+  background-color: $background-color;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .heading-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 
-    @media only screen and (min-width: $breakpoints-desktop) {
-        height: 500px;
-    }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    height: 500px;
+  }
 }
 
 .btn {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    padding: 3.5%;
-    margin-left: 25%;
-    border: none;
-    border-radius: 100px;
-    color: white;
-    box-shadow: 6px 6px 6px lightgrey;
-    background: linear-gradient($color-secondary, $color-primary);
-    cursor: pointer;
-    position: relative;
-    @media only screen and (min-width: $breakpoints-desktop) {
-        font-size: 20px;
-        margin-top: 20px;
-        width: 25%;
-        padding: 1.5%;
-        margin-left: 37.5%;
-    }
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 3.5%;
+  margin-left: 25%;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  box-shadow: 6px 6px 6px lightgrey;
+  background: linear-gradient($color-secondary, $color-primary);
+  cursor: pointer;
+  position: relative;
+  @media only screen and (min-width: $breakpoints-desktop) {
+    font-size: 20px;
+    margin-top: 20px;
+    width: 25%;
+    padding: 1.5%;
+    margin-left: 37.5%;
+  }
 
-    &:hover {
-        box-shadow: 10px 10px 10px darkgrey;
-        background: linear-gradient(to bottom, rgba(255, 121, 218, 0.8) 0%, rgba(147, 86, 220, 0.8) 100%);
-    }
+  &:hover {
+    box-shadow: 10px 10px 10px darkgrey;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 121, 218, 0.8) 0%,
+      rgba(147, 86, 220, 0.8) 100%
+    );
+  }
 }
 
 .rounded-accueil {
-    @include rounded;
-    width: 100%;
-    background-color: #f2f2f2;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    margin-left: 10px;
-    position: relative;
-    z-index: 1;
-    @media only screen and (min-width: $breakpoints-desktop) {
-        padding-left: 120px;
-        padding-right: 120px;
-        font-size: 20px;
-    }
+  @include rounded;
+  width: 100%;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin-left: 10px;
+  position: relative;
+  z-index: 1;
+  &:hover .fonc {
+    color: $color-primary;
+  }
+
+  @media only screen and (min-width: $breakpoints-desktop) {
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 20px;
+  }
 }
 
 .rounded-menu {
-    @include rounded;
-    text-align: start;
-    text-indent: 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 95%;
-    height: 60px;
-    background-color: white;
-    position: relative;
+  @include rounded;
+  text-align: start;
+  text-indent: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 95%;
+  height: 60px;
+  background-color: white;
+  position: relative;
 
-    &:hover .rounded-menu__bloc {
-        visibility: visible;
-        transform: scaleX(1);
-        transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
-
-    }
-    &:hover .prix{margin-right: 45px;}
-    @media only screen and (min-width: $breakpoints-desktop) {
-        width: 400px;
-    }
-
+  &:hover .rounded-menu__bloc {
+    visibility: visible;
+    transform: scaleX(1);
+    transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  }
+  &:hover .prix {
+    margin-right: 45px;
+    padding-left: 20px;
+  }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    width: 400px;
+  }
+  &:hover .intitulécourt {
+    display: block;
+  }
 }
 
-.intitulé{white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;}
-
-.menus__entrees {
-    animation: menu-delay 4s 450ms both;
+.intitulé {
+  display: block;
+  height: 20px;
+}
+.intitulécourt {
+  display: none;
 }
 
 .menus__plats {
-    animation: menu-delay 6s 450ms both;
-    @media only screen and (min-width: $breakpoints-desktop) {
-        margin-top: 82px;
-    }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    margin-top: 82px;
+  }
 }
 
 .menus__desserts {
-    animation: menu-delay 8s 450ms both;
-    @media only screen and (min-width: $breakpoints-desktop) {
-        margin-top: 82px;
-    }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    margin-top: 82px;
+  }
+}
+
+.menus__1 {
+  transition-property: transform;
+  transform: scale(0.1);
+  transform-origin: bottom;
+  animation: menu-delay 1s 450ms both;
+}
+
+.menus__2 {
+  transition-property: transform;
+  transform: scale(0.1);
+  transform-origin: bottom;
+  animation: menu-delay 1300ms 450ms both;
+}
+
+.menus__3 {
+  transition-property: transform;
+  transform: scale(0.1);
+  transform-origin: bottom;
+  animation: menu-delay 1600ms 450ms both;
 }
 
 @keyframes menu-delay {
-    0% {
-       transform: scale(0) ;
-       transform-origin: top;
-    }
+  0% {
+    transform: scaleY(0);
+  }
 
-    100% {
-       transform: scale(1);
-    }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .rounded-menu__bloc {
-    visibility: hidden;
-    border: solid;
-    border-color: $color-tertiary;
-    background-color: $color-tertiary;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    width: 50px;
-    height: 60px;
-    margin-left: 5.1%;
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    top:0;
-    z-index: 11000;
-    transition-property: transform;
-    transform: scaleX(0.1);
-    transform-origin: right;
-    &:hover .fas {
-        animation: icon-rotate 2s 0s both;
-    }
+  visibility: hidden;
+  border: solid;
+  border-color: $color-tertiary;
+  background-color: $color-tertiary;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 50px;
+  height: 60px;
+  margin-left: 5.1%;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 11000;
+  transition-property: transform;
+  transform: scaleX(0.1);
+  transform-origin: right;
+  &:hover .fas {
+    animation: icon-rotate 2s 0s both;
+  }
 
-    @keyframes bloc {
-        0% {
-            transform: scaleX(0);
-        }
-        100% {
-            transform: scaleX(1);
-        }
+  @keyframes bloc {
+    0% {
+      transform: scaleX(0);
     }
+    100% {
+      transform: scaleX(1);
+    }
+  }
 }
 .rounded-menu__bloc .fas {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
 }
 
 @keyframes icon-rotate {
-    0% {
-        transform: rotate(Odeg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(Odeg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .prix {
-    font-weight: bold;
-   
-position: absolute;
-right:10px;
-bottom: 5px;
+  font-weight: bold;
 
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
 }
 
 ol {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style-type: none;
-    list-style: none;
-    padding-left: 0;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
 
-    @media only screen and (min-width: $breakpoints-desktop) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-    }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 
 ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .menu-p3__list {
-    width: 20px;
-    border: solid;
-    border-radius: 50%;
+  width: 20px;
+  border: solid;
+  border-radius: 50%;
 
-    border-color: $color-primary;
-    background-color: $color-primary;
-    text-align: center;
-    color: white;
-    z-index: 2;
-    position: absolute;
-    left: -7px;
-    top: 17px;
+  border-color: $color-primary;
+  background-color: $color-primary;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  left: -7px;
+  top: 17px;
 }
 
 .fonc {
-    position: absolute;
-    left: 0;
-    text-indent: 50px;
-
-    &:hover {
-        color: $color-primary;
-    }
+  position: absolute;
+  left: 0;
+  text-indent: 50px;
 }
 
 .bold {
-    font-weight: bold;
-    line-height: 5px;
+  font-weight: bold;
+  line-height: 5px;
 }
 
 .cartes {
-    background-color: $background-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 14px;
-    width: 100%;
-
-    
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 14px;
+  width: 100%;
 }
 
-.cartes__ensemble{
-     @media only screen and (min-width: $breakpoints-desktop) {
+.cartes__ensemble {
+  @media only screen and (min-width: $breakpoints-desktop) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -394,194 +425,180 @@ ul {
     padding: 0 50px 0 -200px;
 
     width: 100%;
-}}
+  }
+}
 .cartes__titre {
-    height: 20px;
+  height: 20px;
 
-    @media only screen and (min-width: $breakpoints-desktop) {
-        display: flex;
-     
-    }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    display: flex;
+  }
 }
 .menus {
-    width: 100%;
-    margin-top: -30px;
-    background-color: $background-color;
-    border: solid;
-    border-color: $background-color;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    position: relative;
-    padding-bottom: 10px;
-    @media only screen and (min-width: $breakpoints-desktop) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding-bottom: 50px;
-    }
+  width: 100%;
+  margin-top: -30px;
+  background-color: $background-color;
+  border: solid;
+  border-color: $background-color;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  padding-bottom: 10px;
+  @media only screen and (min-width: $breakpoints-desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
 }
 .menus__heart {
-    position: absolute;
-    display: block;
-    z-index: 1;
-    right: 20px;
-    top: 20px;
-    margin-bottom: 0;
-    cursor: pointer;
-    
-    &:hover{
+  position: absolute;
+  display: block;
+  z-index: 1;
+  right: 20px;
+  top: 20px;
+  margin-bottom: 0;
+  cursor: pointer;
 
-        z-index: 0;
-        visibility: hidden;
-        opacity: 0;
-        z-index: 0;
-        
-        
-    }
+  &:hover {
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+  }
 }
 
-.heart-fullm{@include heart-gradient}
+.heart-fullm {
+  @include heart-gradient;
+}
 
 .menus__nom {
-    font-family: "Shrikhand", cursive;
-    font-size: 1.5em;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
 }
 
 .menus__titres {
-    width: 30px;
-    font-weight: normal;
-    font-size: 1em;
-    color: gray;
-    border-bottom: solid;
-    border-color: $color-tertiary;
-    border-width: thick;
-    text-decoration-color: $color-tertiary;
+  width: 30px;
+  font-weight: normal;
+  font-size: 1em;
+  color: gray;
+  border-bottom: solid;
+  border-color: $color-tertiary;
+  border-width: thick;
+  text-decoration-color: $color-tertiary;
 }
 
 .menus__ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .heart {
-    position: absolute;
-    right: 30px;
-    bottom: 40px;
-    display: block;
-    font-weight: thin;
-    z-index: 1;
-    
-    cursor: pointer;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  display: block;
+  font-weight: thin;
+  z-index: 1;
 
-    &:hover{color: transparent;
+  cursor: pointer;
 
-        z-index: 0;
-        visibility: hidden;
-        opacity: 0;
-        
-        
-        
-    }
-   
+  &:hover {
+    color: transparent;
+
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 .heart-full {
-    
-    position: absolute;
-    right: 30px;
-    bottom: 40px;
-    color: $color-secondary;
-    background: linear-gradient($color-secondary, $color-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-    transition-property: transform;
-    opacity:0;
-    transform-origin: bottom;
-    display: block;
-    z-index: 0;
-    
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  color: $color-secondary;
+  background: linear-gradient($color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-property: transform;
+  opacity: 0;
+  transform-origin: bottom;
+  display: block;
+  z-index: 0;
 
-    &:hover{
-        visibility: visible;
-        opacity:1;
-        transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
-        z-index: 2;
-        
-    }
-    
-    
-
-    
-      
+  &:hover {
+    visibility: visible;
+    opacity: 1;
+    transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+    z-index: 2;
+  }
 }
 
 @keyframes heart-color {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .resto {
-    width: 100%;
-    height: 200px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  object-fit: cover;
 }
 
 .cartes__restaurants {
-    position: relative;
-    width: 95%;
-    border: solid;
-    border-width: thin;
-    border-color: transparent;
-    border-radius: 30px;
-    background-color: white;
-    margin-bottom: 20px;
-    box-shadow: 6px 6px 6px gray;
-    @media only screen and (min-width: $breakpoints-desktop) {
-        width: 48%;
-
-        
-    }
+  position: relative;
+  width: 95%;
+  border: solid;
+  border-width: thin;
+  border-color: transparent;
+  border-radius: 30px;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 6px 6px 6px gray;
+  @media only screen and (min-width: $breakpoints-desktop) {
+    width: 48%;
+  }
 }
 .cartes__noms {
-    text-indent: 10px;
+  text-indent: 10px;
 }
 .nouveau {
-    border: solid;
-    border-color: $color-tertiary;
-    background-color: $color-tertiary;
-    color: darkgreen;
-    padding: 5px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+  border: solid;
+  border-color: $color-tertiary;
+  background-color: $color-tertiary;
+  color: darkgreen;
+  padding: 5px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 footer {
-    padding-left: 10px;
-    background-color: rgb(61, 58, 58);
-    color: white;
-    margin:0;
+  padding-left: 10px;
+  background-color: rgb(61, 58, 58);
+  color: white;
+  margin: 0;
 
-    @media only screen and (min-width: $breakpoints-desktop) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  @media only screen and (min-width: $breakpoints-desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .footer__ohmyfood {
-    font-size: 1.2em;
-    color: white;
-    font-family: "Shrikhand", cursive;
+  font-size: 1.2em;
+  color: white;
+  font-family: "Shrikhand", cursive;
 }
 
 .footer__contact {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
