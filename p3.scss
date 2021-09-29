@@ -246,16 +246,19 @@ a {
     width: 400px;
   }
   &:hover .intitulécourt {
-    display: block;
+    visibility: visible;
+  }
+  &:hover .intitulé {
+    visibility: hidden;
   }
 }
 
 .intitulé {
-  display: block;
+  visibility: visible;
   height: 20px;
 }
 .intitulécourt {
-  display: none;
+  visibility: hidden;
 }
 
 .menus__plats {

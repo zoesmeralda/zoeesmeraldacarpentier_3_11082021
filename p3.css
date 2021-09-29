@@ -284,16 +284,20 @@ a {
 }
 
 .rounded-menu:hover .intitulécourt {
-  display: block;
+  visibility: visible;
+}
+
+.rounded-menu:hover .intitulé {
+  visibility: hidden;
 }
 
 .intitulé {
-  display: block;
+  visibility: visible;
   height: 20px;
 }
 
 .intitulécourt {
-  display: none;
+  visibility: hidden;
 }
 
 @media only screen and (min-width: 1224px) {
