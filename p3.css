@@ -319,8 +319,8 @@ a {
   transition-property: transform, -webkit-transform;
   -webkit-transform: scale(0.1);
           transform: scale(0.1);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+  -webkit-transform-origin: top;
+          transform-origin: top;
   -webkit-animation: menu-delay 1s 450ms both;
           animation: menu-delay 1s 450ms both;
 }
@@ -332,10 +332,10 @@ a {
   transition-property: transform, -webkit-transform;
   -webkit-transform: scale(0.1);
           transform: scale(0.1);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-animation: menu-delay 1300ms 450ms both;
-          animation: menu-delay 1300ms 450ms both;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: menu-delay 2s 450ms both;
+          animation: menu-delay 2s 450ms both;
 }
 
 .menus__3 {
@@ -345,10 +345,10 @@ a {
   transition-property: transform, -webkit-transform;
   -webkit-transform: scale(0.1);
           transform: scale(0.1);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-animation: menu-delay 1600ms 450ms both;
-          animation: menu-delay 1600ms 450ms both;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: menu-delay 3s 450ms both;
+          animation: menu-delay 3s 450ms both;
 }
 
 @-webkit-keyframes menu-delay {

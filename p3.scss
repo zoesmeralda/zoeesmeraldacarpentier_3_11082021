@@ -242,6 +242,7 @@ a {
     margin-right: 45px;
     padding-left: 20px;
   }
+
   @media only screen and (min-width: $breakpoints-desktop) {
     width: 400px;
   }
@@ -276,22 +277,22 @@ a {
 .menus__1 {
   transition-property: transform;
   transform: scale(0.1);
-  transform-origin: bottom;
+  transform-origin: top;
   animation: menu-delay 1s 450ms both;
 }
 
 .menus__2 {
   transition-property: transform;
   transform: scale(0.1);
-  transform-origin: bottom;
-  animation: menu-delay 1300ms 450ms both;
+  transform-origin: top;
+  animation: menu-delay 2s 450ms both;
 }
 
 .menus__3 {
   transition-property: transform;
   transform: scale(0.1);
-  transform-origin: bottom;
-  animation: menu-delay 1600ms 450ms both;
+  transform-origin: top;
+  animation: menu-delay 3s 450ms both;
 }
 
 @keyframes menu-delay {
