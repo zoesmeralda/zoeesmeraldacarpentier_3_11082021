@@ -116,7 +116,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   width: 50%;
-  margin-left: 25%;
+  margin-left: 23%;
   margin-top: 0;
   padding: 0;
   background-color: yellow;
@@ -287,21 +287,8 @@ a {
   }
 }
 
-.rounded-menu:hover .intitulécourt {
-  visibility: visible;
-}
-
 .rounded-menu:hover .intitulé {
-  visibility: hidden;
-}
-
-.intitulé {
-  visibility: visible;
-  height: 20px;
-}
-
-.intitulécourt {
-  visibility: hidden;
+  width: 50px;
 }
 
 @media only screen and (min-width: 1224px) {
@@ -756,6 +743,7 @@ ul {
   border-radius: 30px;
   background-color: white;
   margin-bottom: 20px;
+  padding-right: -1px;
   -webkit-box-shadow: 6px 6px 6px gray;
           box-shadow: 6px 6px 6px gray;
 }

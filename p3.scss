@@ -115,7 +115,7 @@ a {
   display: flex;
   justify-content: center;
   width: 50%;
-  margin-left: 25%;
+  margin-left: 23%;
   margin-top: 0;
   padding: 0;
   background-color: yellow;
@@ -249,20 +249,10 @@ a {
   @media only screen and (min-width: $breakpoints-desktop) {
     width: 400px;
   }
-  &:hover .intitulécourt {
-    visibility: visible;
-  }
-  &:hover .intitulé {
-    visibility: hidden;
-  }
-}
 
-.intitulé {
-  visibility: visible;
-  height: 20px;
-}
-.intitulécourt {
-  visibility: hidden;
+  &:hover .intitulé {
+    width: 50px;
+  }
 }
 
 .menus__plats {
@@ -566,6 +556,7 @@ ul {
   border-radius: 30px;
   background-color: white;
   margin-bottom: 20px;
+  padding-right: -1px;
   box-shadow: 6px 6px 6px gray;
   @media only screen and (min-width: $breakpoints-desktop) {
     width: 48%;
