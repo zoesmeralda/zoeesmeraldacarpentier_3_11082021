@@ -571,6 +571,7 @@ ul {
 .menus {
   width: 100%;
   margin-top: -30px;
+  margin-bottom: -20px;
   background-color: #f2f2f2;
   border: solid;
   border-color: #f2f2f2;
