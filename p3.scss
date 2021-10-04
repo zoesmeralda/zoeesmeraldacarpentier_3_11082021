@@ -100,7 +100,13 @@ a {
   text-decoration: none;
   color: black;
 }
-
+input {
+  border: none;
+  background-color: #d8d5d8;
+  color: black;
+  font-size: 18px;
+  text-indent: 10px;
+}
 .logo {
   width: 40%;
   margin-left: 20%;
@@ -150,6 +156,11 @@ a {
 .heading-p3__map {
   background-color: #d8d5d8;
   padding: 1%;
+}
+
+.ville {
+  align-items: center;
+  margin-left: 5%;
 }
 
 .heading-p3__background {
