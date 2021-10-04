@@ -103,13 +103,18 @@ a {
 input {
   border: none;
   background-color: #d8d5d8;
-  color: black;
+
   font-size: 18px;
   text-indent: 10px;
+}
+input::placeholder {
+  color: black;
+  opacity: 1;
 }
 .logo {
   width: 40%;
   margin-left: 20%;
+  margin-top: 5px;
   @media only screen and (min-width: $breakpoints-desktop) {
     margin-left: 30%;
   }
@@ -146,6 +151,8 @@ input {
 .heading-p3__logo {
   width: 40%;
   background-color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .heading-p3__titre {
@@ -260,9 +267,16 @@ input {
     width: 400px;
   }
 
-  &:hover .intitulé {
+  &:hover .intitule {
     width: 50px;
   }
+}
+.intitule {
+  width: 100px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menus__plats {
@@ -420,6 +434,7 @@ ul {
   justify-content: center;
   padding-left: 14px;
   width: 100%;
+  margin-bottom: -20px;
 }
 
 .cartes__ensemble {
@@ -556,6 +571,8 @@ ul {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   object-fit: cover;
+  width: calc(100% + 2px);
+  margin: -1px 0 0 -1px;
 }
 
 .cartes__restaurants {
@@ -591,7 +608,8 @@ footer {
   padding-left: 10px;
   background-color: rgb(61, 58, 58);
   color: white;
-  margin: 0;
+  margin-bottom: -20px;
+  padding-bottom: 10px;
 
   @media only screen and (min-width: $breakpoints-desktop) {
     display: flex;
