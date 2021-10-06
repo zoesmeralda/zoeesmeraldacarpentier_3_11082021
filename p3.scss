@@ -11,7 +11,7 @@ $breakpoints-tablet: 768px;
   border: solid;
   border-width: thin;
   border-color: transparent;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 6px 6px 6px lightgrey;
   margin-bottom: 15px;
 }
@@ -34,6 +34,11 @@ $breakpoints-tablet: 768px;
     animation: heart-color 3s cubic-bezier(0.32, 0, 0.07, 1);
     z-index: 2;
   }
+}
+@mixin delai {
+  transition-property: transform;
+  transform: scale(0.1);
+  transform-origin: top;
 }
 .loading {
   position: fixed;
@@ -113,8 +118,8 @@ input::placeholder {
 }
 .logo {
   width: 40%;
-  margin-left: 20%;
-  margin-top: 5px;
+  margin-left: 17%;
+  margin-top: 10px;
   @media only screen and (min-width: $breakpoints-desktop) {
     margin-left: 30%;
   }
@@ -217,6 +222,10 @@ input::placeholder {
   }
 }
 
+.menu-p3 {
+  margin-bottom: 50px;
+}
+
 .rounded-accueil {
   @include rounded;
   width: 100%;
@@ -228,7 +237,7 @@ input::placeholder {
   position: relative;
   z-index: 1;
   &:hover {
-    background-color: #cbc3d4;
+    background-color: rgba(147, 86, 220, 0.2);
   }
   &:hover .fonc {
     color: $color-primary;
@@ -268,15 +277,19 @@ input::placeholder {
   }
 
   &:hover .intitule {
-    width: 50px;
+    width: 280px;
   }
 }
 .intitule {
-  width: 100px;
+  width: 320px;
   display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+article {
+  margin-bottom: 40px;
 }
 
 .menus__plats {
@@ -292,24 +305,23 @@ input::placeholder {
 }
 
 .menus__1 {
-  transition-property: transform;
-  transform: scale(0.1);
-  transform-origin: top;
+  @include delai;
   animation: menu-delay 1s 450ms both;
 }
 
 .menus__2 {
-  transition-property: transform;
-  transform: scale(0.1);
-  transform-origin: top;
+  @include delai;
   animation: menu-delay 2s 450ms both;
 }
 
 .menus__3 {
-  transition-property: transform;
-  transform: scale(0.1);
-  transform-origin: top;
+  @include delai;
   animation: menu-delay 3s 450ms both;
+}
+
+.menus__4 {
+  @include delai;
+  animation: menu-delay 4s 450ms both;
 }
 
 @keyframes menu-delay {
@@ -327,9 +339,9 @@ input::placeholder {
   border: solid;
   border-color: $color-tertiary;
   background-color: $color-tertiary;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  width: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 52px;
   height: 60px;
   margin-left: 5.1%;
   cursor: pointer;
@@ -337,6 +349,7 @@ input::placeholder {
   right: 0;
   top: 0;
   z-index: 11000;
+
   transition-property: transform;
   transform: scaleX(0.1);
   transform-origin: right;
@@ -432,7 +445,9 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 30px;
   padding-left: 14px;
+  padding-bottom: 50px;
   width: 100%;
   margin-bottom: -20px;
 }
@@ -466,7 +481,7 @@ ul {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   @media only screen and (min-width: $breakpoints-desktop) {
     display: flex;
     flex-direction: row;
@@ -502,13 +517,13 @@ ul {
 }
 
 .menus__titres {
-  width: 30px;
+  width: 40px;
   font-weight: normal;
   font-size: 1em;
   color: gray;
   border-bottom: solid;
   border-color: $color-tertiary;
-  border-width: thick;
+  border-width: normal;
   text-decoration-color: $color-tertiary;
 }
 
@@ -605,7 +620,8 @@ ul {
 }
 
 footer {
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-top: 10px;
   background-color: rgb(61, 58, 58);
   color: white;
   margin-bottom: -20px;
