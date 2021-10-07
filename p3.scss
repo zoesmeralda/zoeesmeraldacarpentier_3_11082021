@@ -107,10 +107,11 @@ a {
 }
 input {
   border: none;
+  width: 130px;
   background-color: #d8d5d8;
-
+  text-indent: 1px;
   font-size: 18px;
-  text-indent: 10px;
+  text-align: center;
 }
 input::placeholder {
   color: black;
@@ -151,6 +152,7 @@ input::placeholder {
   width: 100%;
 
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .heading-p3__logo {
@@ -172,12 +174,11 @@ input::placeholder {
 
 .ville {
   align-items: center;
-  margin-left: 5%;
 }
 
 .heading-p3__background {
   background-color: $background-color;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   padding-top: 30px;
 }
 
@@ -415,7 +416,7 @@ ul {
 }
 
 .menu-p3__list {
-  width: 20px;
+  width: 25px;
   border: solid;
   border-radius: 50%;
 
@@ -432,6 +433,7 @@ ul {
 .fonc {
   position: absolute;
   left: 0;
+  color: gray;
   text-indent: 50px;
 }
 
@@ -600,7 +602,7 @@ ul {
   background-color: white;
   margin-bottom: 20px;
   padding-right: -1px;
-  box-shadow: 6px 6px 6px gray;
+  box-shadow: 6px 6px 6px lightgrey;
   @media only screen and (min-width: $breakpoints-desktop) {
     width: 48%;
   }
