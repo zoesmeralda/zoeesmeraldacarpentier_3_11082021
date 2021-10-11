@@ -253,6 +253,7 @@ input::placeholder {
 
 .rounded-menu {
   @include rounded;
+
   text-align: start;
   text-indent: 10px;
   white-space: nowrap;
@@ -260,7 +261,7 @@ input::placeholder {
   text-overflow: ellipsis;
   width: 100%;
   height: 60px;
-  background-color: white;
+  background-color: red;
   position: relative;
 
   &:hover .rounded-menu__bloc {
