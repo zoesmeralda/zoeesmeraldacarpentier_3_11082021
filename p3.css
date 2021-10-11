@@ -255,6 +255,10 @@ input::placeholder {
   margin-bottom: 50px;
 }
 
+.menu-p3__titre {
+  text-indent: 15px;
+}
+
 .rounded-accueil {
   border: solid;
   border-width: thin;
@@ -297,6 +301,7 @@ input::placeholder {
   -webkit-box-shadow: 6px 6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey;
   margin-bottom: 15px;
+  border: none;
   text-align: start;
   text-indent: 10px;
   white-space: nowrap;
@@ -304,7 +309,7 @@ input::placeholder {
   text-overflow: ellipsis;
   width: 100%;
   height: 60px;
-  background-color: red;
+  background-color: white;
   position: relative;
 }
 
@@ -343,6 +348,12 @@ input::placeholder {
 
 article {
   margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 1224px) {
+  .menus__entrees {
+    margin-top: 82px;
+  }
 }
 
 @media only screen and (min-width: 1224px) {
@@ -639,6 +650,10 @@ ul {
   }
 }
 
+.cartes__villes {
+  text-indent: 10px;
+}
+
 .menus {
   width: 100%;
   margin-top: -30px;
@@ -650,6 +665,7 @@ ul {
   border-top-right-radius: 30px;
   position: relative;
   padding-bottom: 50px;
+  position: relative;
 }
 
 @media only screen and (min-width: 1224px) {
@@ -712,6 +728,7 @@ ul {
 }
 
 .menus__nom {
+  position: absolute;
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
 }
