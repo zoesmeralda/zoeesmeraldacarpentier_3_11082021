@@ -298,6 +298,7 @@ article {
 }
 
 .menus__entrees {
+  margin-top: 60px;
   @media only screen and (min-width: $breakpoints-desktop) {
     margin-top: 82px;
   }
@@ -478,6 +479,9 @@ ul {
 }
 .cartes__titre {
   height: 20px;
+  font-weight: bolder;
+  font-size: 32px;
+  margin-bottom: 30px;
 
   @media only screen and (min-width: $breakpoints-desktop) {
     display: flex;
@@ -498,7 +502,7 @@ ul {
   border-top-right-radius: 30px;
   position: relative;
   padding-bottom: 50px;
-
+  padding-top: 30px;
   position: relative;
   @media only screen and (min-width: $breakpoints-desktop) {
     display: flex;
@@ -531,6 +535,7 @@ ul {
 
 .menus__nom {
   position: absolute;
+  top: 0;
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
 }
