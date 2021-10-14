@@ -287,9 +287,9 @@ input::placeholder {
 
 @media only screen and (min-width: 1224px) {
   .rounded-accueil {
-    padding-left: 120px;
-    padding-right: 120px;
-    font-size: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    font-size: 16px;
   }
 }
 
@@ -330,7 +330,7 @@ input::placeholder {
 
 @media only screen and (min-width: 1224px) {
   .rounded-menu {
-    width: 500px;
+    width: 390px;
   }
 }
 
@@ -579,6 +579,7 @@ ul {
 
 .menu-p3__list {
   width: 25px;
+  height: 25px;
   border: solid;
   border-radius: 50%;
   border-color: #9356dc;
@@ -708,7 +709,6 @@ ul {
   z-index: 0;
   visibility: hidden;
   opacity: 0;
-  z-index: 0;
 }
 
 .heart-fullm {
