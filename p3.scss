@@ -389,7 +389,7 @@ article {
 
 @keyframes icon-rotate {
   0% {
-    transform: rotate(Odeg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -472,7 +472,6 @@ ul {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 30px 0 0 0;
-    padding: 0 50px 0 -200px;
 
     width: 100%;
   }
@@ -547,7 +546,7 @@ ul {
   color: gray;
   border-bottom: solid;
   border-color: $color-tertiary;
-  border-width: normal;
+
   text-decoration-color: $color-tertiary;
 }
 
@@ -560,7 +559,7 @@ ul {
   right: 30px;
   bottom: 40px;
   display: block;
-  font-weight: thin;
+  font-weight: lighter;
   z-index: 1;
 
   cursor: pointer;
@@ -623,7 +622,7 @@ ul {
   border-radius: 30px;
   background-color: white;
   margin-bottom: 20px;
-  padding-right: -1px;
+
   box-shadow: 6px 6px 6px lightgrey;
   @media only screen and (min-width: $breakpoints-desktop) {
     width: 48%;

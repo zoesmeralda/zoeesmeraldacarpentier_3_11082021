@@ -513,8 +513,8 @@ article {
 
 @-webkit-keyframes icon-rotate {
   0% {
-    -webkit-transform: rotate(Odeg);
-            transform: rotate(Odeg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -524,8 +524,8 @@ article {
 
 @keyframes icon-rotate {
   0% {
-    -webkit-transform: rotate(Odeg);
-            transform: rotate(Odeg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -637,7 +637,6 @@ ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 30px 0 0 0;
-    padding: 0 50px 0 -200px;
     width: 100%;
   }
 }
@@ -749,7 +748,6 @@ ul {
   color: gray;
   border-bottom: solid;
   border-color: #99e2d0;
-  border-width: normal;
   -webkit-text-decoration-color: #99e2d0;
           text-decoration-color: #99e2d0;
 }
@@ -763,7 +761,7 @@ ul {
   right: 30px;
   bottom: 40px;
   display: block;
-  font-weight: thin;
+  font-weight: lighter;
   z-index: 1;
   cursor: pointer;
 }
@@ -837,7 +835,6 @@ ul {
   border-radius: 30px;
   background-color: white;
   margin-bottom: 20px;
-  padding-right: -1px;
   -webkit-box-shadow: 6px 6px 6px lightgrey;
           box-shadow: 6px 6px 6px lightgrey;
 }
